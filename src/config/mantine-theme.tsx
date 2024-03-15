@@ -5,9 +5,10 @@ const thaiRed: MantineColorsTuple = ["#ffebf0", "#f9d6dc", "#f0aab5", "#e87b8d",
 const thaiGold: MantineColorsTuple = ["#fffbe1", "#fff5cc", "#ffeb9b", "#ffe064", "#ffd738", "#ffd11c", "#ffce09", "#e3b500", "#c9a100", "#ae8b00"];
 
 export const thaiScriptTheme = createTheme({
+  primaryColor: "thai-purple",
   colors: {
-    thaipurple: thaiPurple,
-    thaired: thaiRed,
-    thaigold: thaiGold,
+    "thai-purple": thaiPurple,
+    "thai-red": thaiRed,
+    "thai-gold": thaiGold,
   },
 });
