@@ -3,10 +3,10 @@
     {
       "order": 1,
       "letter": "ข",
+      "learningOrder": 21,
       "type": "consonant",
       "subType": "high",
       "similarWords": ["kite"],
-      "rarity": "normal",
       "variants": [
         {
           "position": "middle",
@@ -21,10 +21,10 @@
     {
       "order": 2,
       "letter": "ก",
+      "learningOrder": 4,
       "type": "consonant",
       "subType": "middle",
       "similarWords": ["go"],
-      "rarity": "normal",
       "variants": [
         {
           "position": "anywhere",
@@ -39,10 +39,10 @@
     {
       "order": 3,
       "letter": "ค",
+      "learningOrder": 16,
       "type": "consonant",
       "subType": "low-voiceless",
       "similarWords": ["kite"],
-      "rarity": "normal",
       "variants": [
         {
           "position": "middle",
@@ -57,10 +57,10 @@
     {
       "order": 4,
       "letter": "ฆ",
+      "learningOrder": 41,
       "type": "consonant",
       "subType": "low-voiceless",
       "similarWords": ["kite"],
-      "rarity": "normal",
       "variants": [
         {
           "position": "middle",
@@ -75,10 +75,10 @@
     {
       "order": 5,
       "letter": "ง",
+      "learningOrder": 5,
       "type": "consonant",
       "subType": "low-sonorant",
       "similarWords": ["sing"],
-      "rarity": "normal",
       "variants": [
         {
           "position": "anywhere",
@@ -93,10 +93,10 @@
     {
       "order": 6,
       "letter": "จ",
+      "learningOrder": 19,
       "type": "consonant",
       "subType": "middle",
       "similarWords": ["jam"],
-      "rarity": "normal",
       "variants": [
         {
           "position": "middle",
@@ -111,10 +111,10 @@
     {
       "order": 7,
       "letter": "ฉ",
+      "learningOrder": 34,
       "type": "consonant",
       "subType": "high",
       "similarWords": ["chop"],
-      "rarity": "normal",
       "variants": [
         {
           "position": "middle",
@@ -129,10 +129,10 @@
     {
       "order": 8,
       "letter": "ช",
+      "learningOrder": 20,
       "type": "consonant",
       "subType": "low-voiceless",
       "similarWords": ["chop"],
-      "rarity": "normal",
       "variants": [
         {
           "position": "middle",
@@ -147,10 +147,10 @@
     {
       "order": 9,
       "letter": "ซ",
+      "learningOrder": 23,
       "type": "consonant",
       "subType": "middle",
       "similarWords": ["sing"],
-      "rarity": "normal",
       "variants": [
         {
           "position": "middle",
@@ -165,10 +165,10 @@
     {
       "order": 10,
       "letter": "ฌ",
+      "learningOrder": 42,
       "type": "consonant",
       "subType": "low-voiceless",
       "similarWords": ["chop"],
-      "rarity": "normal",
       "variants": [
         {
           "position": "middle",
@@ -183,10 +183,10 @@
     {
       "order": 11,
       "letter": "ญ",
+      "learningOrder": 30,
       "type": "consonant",
       "subType": "low-sonorant",
       "similarWords": ["yes"],
-      "rarity": "normal",
       "variants": [
         {
           "position": "middle",
@@ -201,10 +201,10 @@
     {
       "order": 12,
       "letter": "ฎ",
+      "learningOrder": 36,
       "type": "consonant",
       "subType": "middle",
       "similarWords": ["dog"],
-      "rarity": "rare",
       "variants": [
         {
           "position": "middle",
@@ -219,10 +219,10 @@
     {
       "order": 13,
       "letter": "ฏ",
+      "learningOrder": 37,
       "type": "consonant",
       "subType": "middle",
       "similarWords": ["toad"],
-      "rarity": "rare",
       "variants": [
         {
           "position": "anywhere",
@@ -237,10 +237,10 @@
     {
       "order": 14,
       "letter": "ฐ",
+      "learningOrder": 32,
       "type": "consonant",
       "subType": "high",
       "similarWords": ["thaw"],
-      "rarity": "rare",
       "variants": [
         {
           "position": "middle",
@@ -255,10 +255,10 @@
     {
       "order": 15,
       "letter": "ฑ",
+      "learningOrder": 39,
       "type": "consonant",
       "subType": "low-voiceless",
       "similarWords": ["thaw"],
-      "rarity": "rare",
       "variants": [
         {
           "position": "middle",
@@ -273,10 +273,10 @@
     {
       "order": 16,
       "letter": "ฒ",
+      "learningOrder": 38,
       "type": "consonant",
       "subType": "low-voiceless",
       "similarWords": ["thaw"],
-      "rarity": "rare",
       "variants": [
         {
           "position": "middle",
@@ -291,10 +291,10 @@
     {
       "order": 17,
       "letter": "ณ",
+      "learningOrder": 27,
       "type": "consonant",
       "subType": "low-sonorant",
       "similarWords": ["no"],
-      "rarity": "normal",
       "variants": [
         {
           "position": "anywhere",
@@ -309,10 +309,10 @@
     {
       "order": 18,
       "letter": "ด",
+      "learningOrder": 11,
       "type": "consonant",
       "subType": "middle",
       "similarWords": ["dog"],
-      "rarity": "normal",
       "variants": [
         {
           "position": "middle",
@@ -327,10 +327,10 @@
     {
       "order": 19,
       "letter": "ต",
+      "learningOrder": 13,
       "type": "consonant",
       "subType": "middle",
       "similarWords": ["toad"],
-      "rarity": "normal",
       "variants": [
         {
           "position": "anywhere",
@@ -345,10 +345,10 @@
     {
       "order": 20,
       "letter": "ถ",
+      "learningOrder": 24,
       "type": "consonant",
       "subType": "high",
       "similarWords": ["thaw"],
-      "rarity": "normal",
       "variants": [
         {
           "position": "middle",
@@ -363,10 +363,10 @@
     {
       "order": 21,
       "letter": "ท",
+      "learningOrder": 10,
       "type": "consonant",
       "subType": "low-voiceless",
       "similarWords": ["thaw"],
-      "rarity": "normal",
       "variants": [
         {
           "position": "middle",
@@ -381,10 +381,10 @@
     {
       "order": 22,
       "letter": "ธ",
+      "learningOrder": 25,
       "type": "consonant",
       "subType": "low-voiceless",
       "similarWords": ["thaw"],
-      "rarity": "normal",
       "variants": [
         {
           "position": "middle",
@@ -398,11 +398,11 @@
     },
     {
       "order": 23,
+      "learningOrder": 1,
       "letter": "น",
       "type": "consonant",
       "subType": "low-sonorant",
       "similarWords": ["no"],
-      "rarity": "normal",
       "variants": [
         {
           "position": "anywhere",
@@ -410,17 +410,17 @@
           "word": "นหนู",
           "wordTranslation": "mouse",
           "wordEmoji": "🐭",
-          "wordTransliteration": "non nu"
+          "wordTransliteration": "no nu"
         }
       ]
     },
     {
       "order": 24,
       "letter": "บ",
+      "learningOrder": 14,
       "type": "consonant",
       "subType": "middle",
       "similarWords": ["boat"],
-      "rarity": "normal",
       "variants": [
         {
           "position": "middle",
@@ -435,10 +435,10 @@
     {
       "order": 25,
       "letter": "ป",
+      "learningOrder": 15,
       "type": "consonant",
       "subType": "middle",
       "similarWords": ["paw"],
-      "rarity": "normal",
       "variants": [
         {
           "position": "anywhere",
@@ -453,10 +453,10 @@
     {
       "order": 26,
       "letter": "ผ",
+      "learningOrder": 29,
       "type": "consonant",
       "subType": "high",
       "similarWords": ["paw"],
-      "rarity": "normal",
       "variants": [
         {
           "position": "middle",
@@ -471,10 +471,10 @@
     {
       "order": 27,
       "letter": "ฝ",
+      "learningOrder": 35,
       "type": "consonant",
       "subType": "high",
       "similarWords": ["fan"],
-      "rarity": "normal",
       "variants": [
         {
           "position": "middle",
@@ -489,10 +489,10 @@
     {
       "order": 28,
       "letter": "พ",
+      "learningOrder": 18,
       "type": "consonant",
       "subType": "low-voiceless",
       "similarWords": ["paw"],
-      "rarity": "normal",
       "variants": [
         {
           "position": "middle",
@@ -507,10 +507,10 @@
     {
       "order": 29,
       "letter": "ฟ",
+      "learningOrder": 31,
       "type": "consonant",
       "subType": "low-voiceless",
       "similarWords": ["paw"],
-      "rarity": "normal",
       "variants": [
         {
           "position": "middle",
@@ -525,10 +525,10 @@
     {
       "order": 30,
       "letter": "ภ",
+      "learningOrder": 26,
       "type": "consonant",
       "subType": "low-voiceless",
       "similarWords": ["paw"],
-      "rarity": "normal",
       "variants": [
         {
           "position": "middle",
@@ -543,10 +543,10 @@
     {
       "order": 31,
       "letter": "ม",
+      "learningOrder": 6,
       "type": "consonant",
       "subType": "low-sonorant",
       "similarWords": ["mom"],
-      "rarity": "normal",
       "variants": [
         {
           "position": "anywhere",
@@ -561,10 +561,10 @@
     {
       "order": 32,
       "letter": "ย",
+      "learningOrder": 7,
       "type": "consonant",
       "subType": "low-sonorant",
       "similarWords": ["yawn"],
-      "rarity": "normal",
       "variants": [
         {
           "position": "anywhere",
@@ -579,10 +579,10 @@
     {
       "order": 33,
       "letter": "ร",
+      "learningOrder": 2,
       "type": "consonant",
       "subType": "low-sonorant",
       "similarWords": ["roar"],
-      "rarity": "normal",
       "variants": [
         {
           "position": "middle",
@@ -597,10 +597,10 @@
     {
       "order": 34,
       "letter": "ล",
+      "learningOrder": 8,
       "type": "consonant",
       "subType": "low-sonorant",
       "similarWords": ["low"],
-      "rarity": "normal",
       "variants": [
         {
           "position": "middle",
@@ -615,10 +615,10 @@
     {
       "order": 35,
       "letter": "ว",
+      "learningOrder": 9,
       "type": "consonant",
       "subType": "low-sonorant",
       "similarWords": ["wow"],
-      "rarity": "normal",
       "variants": [
         {
           "position": "middle",
@@ -633,10 +633,10 @@
     {
       "order": 36,
       "letter": "ศ",
+      "learningOrder": 22,
       "type": "consonant",
       "subType": "high",
       "similarWords": ["saw"],
-      "rarity": "normal",
       "variants": [
         {
           "position": "middle",
@@ -651,10 +651,10 @@
     {
       "order": 37,
       "letter": "ษ",
+      "learningOrder": 28,
       "type": "consonant",
       "subType": "high",
       "similarWords": ["saw"],
-      "rarity": "normal",
       "variants": [
         {
           "position": "middle",
@@ -669,10 +669,10 @@
     {
       "order": 38,
       "letter": "ส",
+      "learningOrder": 12,
       "type": "consonant",
       "subType": "high",
       "similarWords": ["saw"],
-      "rarity": "normal",
       "variants": [
         {
           "position": "middle",
@@ -687,10 +687,10 @@
     {
       "order": 39,
       "letter": "ห",
+      "learningOrder": 17,
       "type": "consonant",
       "subType": "high",
       "similarWords": ["how"],
-      "rarity": "normal",
       "variants": [
         {
           "position": "middle",
@@ -705,10 +705,10 @@
     {
       "order": 40,
       "letter": "ฬ",
+      "learningOrder": 40,
       "type": "consonant",
       "subType": "low-sonorant",
       "similarWords": ["low"],
-      "rarity": "rare",
       "variants": [
         {
           "position": "middle",
@@ -723,10 +723,10 @@
     {
       "order": 41,
       "letter": "อ",
+      "learningOrder": 3,
       "type": "consonant",
       "subType": "middle",
       "similarWords": [],
-      "rarity": "normal",
       "variants": [
         {
           "position": "middle",
@@ -741,10 +741,10 @@
     {
       "order": 42,
       "letter": "ฮ",
+      "learningOrder": 33,
       "type": "consonant",
       "subType": "low-sonorant",
       "similarWords": ["how"],
-      "rarity": "normal",
       "variants": [
         {
           "position": "middle",
