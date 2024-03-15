@@ -2,7 +2,7 @@ const synth = window.speechSynthesis;
 const voices = synth.getVoices();
 const thaiVoice = voices.find((voice) => voice.lang === "th-TH");
 
-export function speak(letter: string, speed: number = 1) {
+export function syntheticSpeak(letter: string, speed: number = 1) {
   const utterrance = new SpeechSynthesisUtterance(letter);
 
   // Set voice to Thai if available
