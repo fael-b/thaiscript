@@ -1,7 +1,7 @@
 [package]
 name = "thaiscript"
-version = "0.0.0"
-description = "A Tauri App"
+version = "0.0.1"
+description = "ThaiScript"
 authors = ["you"]
 edition = "2021"
 
@@ -12,6 +12,8 @@ tauri-build = { version = "1", features = [] }
 
 [dependencies]
 tauri = { version = "1", features = ["shell-open"] }
+reqwest = { version = "0.11", features = ["json"] }
+rusqlite = { version = "0.30", features = ["bundled", "serde_json", "backup"] }
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
 
