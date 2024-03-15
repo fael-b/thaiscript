@@ -5,7 +5,8 @@ description = "ThaiScript"
 authors = ["you"]
 edition = "2021"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[workspace]
+members = [".", "entity", "migration"]
 
 [build-dependencies]
 tauri-build = { version = "1", features = [] }
@@ -13,9 +14,14 @@ tauri-build = { version = "1", features = [] }
 [dependencies]
 tauri = { version = "1", features = ["shell-open"] }
 reqwest = { version = "0.11", features = ["json"] }
-rusqlite = { version = "0.30", features = ["bundled", "serde_json", "backup"] }
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
+sea-orm = { version = "0.12.14", features = [
+    "sqlx-sqlite",
+    "runtime-tokio-native-tls",
+] }
+entity = { path = "entity" }
+migration = { path = "migration" } # Only use this if migrations are to be run on the end user's machine
 
 [features]
 # This feature is used for production builds or when a dev server is not specified, DO NOT REMOVE!!
