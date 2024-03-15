@@ -2,7 +2,7 @@ const synth = window.speechSynthesis;
 const voices = synth.getVoices();
 const thaiVoice = voices.find((voice) => voice.lang === "th-TH");
 
-export function say(letter: string, speed: number = 1) {
+export function speak(letter: string, speed: number = 1) {
   const utterrance = new SpeechSynthesisUtterance(letter);
 
   // Set voice to Thai if available
@@ -18,6 +18,9 @@ export function say(letter: string, speed: number = 1) {
   const pitchRangeSlider = 0.3;
   const randomnessFactor = Math.random() * 0.75;
   utterrance.pitch = basePitch + randomnessFactor - pitchRangeSlider;
+
+  // Cancel any previous ongoing speech
+  synth.cancel();
 
   synth.speak(utterrance);
 }
