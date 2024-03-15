@@ -1,7 +1,7 @@
-# ThaiScript
+# ThaiScript 🇹🇭
 
 The best way to learn Thai script.
-Powered by TypeScript, React, and Tauri.
+Powered by [TypeScript](https://www.typescriptlang.org/), [React](https://react.dev/), and [Tauri](https://tauri.app/).
 
 ## Getting Started
 
