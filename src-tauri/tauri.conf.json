@@ -21,7 +21,16 @@
       {
         "title": "ThaiScript",
         "width": 400,
-        "height": 600
+        "height": 600,
+        "visible": false,
+        "resizable": true
+      },
+      {
+        "height": 256,
+        "width": 256,
+        "decorations": false,
+        "label": "splashscreen",
+        "url": "splashscreen.html"
       }
     ],
     "security": {
