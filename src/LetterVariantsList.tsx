@@ -1,26 +1,23 @@
-import { invoke } from "@tauri-apps/api/tauri";
-import { useState } from "react";
 import { speak } from "./speech";
 import { Button } from "@mantine/core";
+import { useQuery } from "@tanstack/react-query";
+import { fetchLetterVariants } from "./data/queries";
 
 export function LetterVariantsList() {
-  const [letterVariants, setLetterVariants] = useState<any[]>([]);
-
-  function fetchLetterVariants() {
-    invoke("get_letter_variants")
-      .then((response) => {
-        console.log(response);
-        setLetterVariants(response as any[]);
-      })
-      .catch((err) => {
-        console.error(err);
-      });
-  }
+  const {
+    data: letterVariants,
+    isLoading,
+    error,
+  } = useQuery({
+    queryKey: ["letterVariants"],
+    queryFn: fetchLetterVariants,
+  });
 
   return (
     <div>
-      <button onClick={fetchLetterVariants}>Fetch letter variants</button>
-      {letterVariants.map((letterVariant) => {
+      {isLoading && <div>Loading...</div>}
+      {error && <div>Error: {error.message}</div>}
+      {letterVariants?.map((letterVariant) => {
         return (
           <Button onClick={() => speak(letterVariant.exampleWord)} title={letterVariant.romanization} key={letterVariant.id}>
             {letterVariant.letter} - {letterVariant.exampleWordEmoji}
