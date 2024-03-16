@@ -4,6 +4,12 @@ use sea_orm::*;
 pub struct Query;
 
 impl Query {
+    pub async fn find_all_letter_variants(
+        db: &DbConn,
+    ) -> Result<Vec<letter_variant::Model>, DbErr> {
+        LetterVariant::find().all(db).await
+    }
+
     pub async fn find_letter_variant_by_id(
         db: &DbConn,
         id: String,

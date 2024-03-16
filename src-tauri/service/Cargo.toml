@@ -7,6 +7,7 @@ edition = "2021"
 
 [dependencies]
 entity = { path = "../entity" }
+migration = { path = "../migration" } # Only use this if migrations are to be run on the end user's machine
 sea-orm = { version = "0.12", features = [
     "sqlx-sqlite",
     "runtime-tokio-native-tls",

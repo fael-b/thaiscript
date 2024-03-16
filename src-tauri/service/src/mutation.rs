@@ -1,3 +1,4 @@
+#![allow(unused_imports)]
 use ::entity::{letter_variant, letter_variant::Entity as LetterVariant};
 use sea_orm::*;
 
