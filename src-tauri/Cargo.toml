@@ -6,7 +6,7 @@ authors = ["you"]
 edition = "2021"
 
 [workspace]
-members = [".", "entity", "migration"]
+members = [".", "entity", "migration", "service"]
 
 [build-dependencies]
 tauri-build = { version = "1", features = [] }

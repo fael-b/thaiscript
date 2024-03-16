@@ -1155,6 +1155,7 @@ name = "entity"
 version = "0.1.0"
 dependencies = [
  "sea-orm",
+ "serde",
 ]
 
 [[package]]
@@ -4760,6 +4761,14 @@ dependencies = [
  "serde_json",
  "tauri",
  "tauri-build",
+]
+
+[[package]]
+name = "thaiscript-db-service"
+version = "0.1.0"
+dependencies = [
+ "entity",
+ "sea-orm",
 ]
 
 [[package]]
