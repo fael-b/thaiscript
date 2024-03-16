@@ -1,0 +1,3 @@
+.review:hover {
+    box-shadow: 0 0 1em var(--mantine-color-thai-gold-filled-hover);
+}

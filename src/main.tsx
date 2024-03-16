@@ -11,7 +11,7 @@ import "@mantine/core/styles.css";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <MantineProvider theme={thaiScriptTheme}>
+    <MantineProvider theme={thaiScriptTheme} forceColorScheme="dark">
       <QueryClientProvider client={queryClient}>
         <RouterProvider router={appRouter} />
       </QueryClientProvider>

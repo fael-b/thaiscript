@@ -1,10 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
-import { LetterVariantsList } from "../LetterVariantsList";
+import { HomeView } from "../views/HomeView";
 
 export const appRouter = createBrowserRouter([
   {
     path: "/",
-    element: <LetterVariantsList />,
+    element: <HomeView />,
     errorElement: <div>404 Not Found</div>,
   },
 ]);
