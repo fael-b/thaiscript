@@ -1,758 +1,758 @@
 {
   "letters": [
     {
-      "order": 1,
+      "id": "kho-khay",
       "letter": "ข",
       "learningOrder": 21,
-      "type": "consonant",
-      "subType": "high",
+      "category": "consonant",
+      "tone": "high",
       "similarWords": ["kite"],
       "variants": [
         {
           "position": "middle",
           "romanization": "kh",
-          "word": "ขไข่",
-          "wordTranslation": "egg",
-          "wordEmoji": "🥚",
-          "wordTransliteration": "kho khay"
+          "exampleWord": "ขไข่",
+          "exampleWordExplanation": "egg",
+          "exampleWordEmoji": "🥚",
+          "exampleWordTransliteration": "kho khay"
         }
       ]
     },
     {
-      "order": 2,
+      "id": "kho-kai",
       "letter": "ก",
       "learningOrder": 4,
-      "type": "consonant",
-      "subType": "middle",
+      "category": "consonant",
+      "tone": "middle",
       "similarWords": ["go"],
       "variants": [
         {
           "position": "anywhere",
           "romanization": "k",
-          "word": "กไก่",
-          "wordTranslation": "chicken",
-          "wordEmoji": "🐔",
-          "wordTransliteration": "ko kai"
+          "exampleWord": "กไก่",
+          "exampleWordExplanation": "chicken",
+          "exampleWordEmoji": "🐔",
+          "exampleWordTransliteration": "ko kai"
         }
       ]
     },
     {
-      "order": 3,
+      "id": "kho-khwai",
       "letter": "ค",
       "learningOrder": 16,
-      "type": "consonant",
-      "subType": "low-voiceless",
+      "category": "consonant",
+      "tone": "low-voiceless",
       "similarWords": ["kite"],
       "variants": [
         {
           "position": "middle",
           "romanization": "kh",
-          "word": "คควาย",
-          "wordTranslation": "buffalo",
-          "wordEmoji": "🐃",
-          "wordTransliteration": "kho khwai"
+          "exampleWord": "คควาย",
+          "exampleWordExplanation": "buffalo",
+          "exampleWordEmoji": "🐃",
+          "exampleWordTransliteration": "kho khwai"
         }
       ]
     },
     {
-      "order": 4,
+      "id": "kho-ra-khang",
       "letter": "ฆ",
       "learningOrder": 41,
-      "type": "consonant",
-      "subType": "low-voiceless",
+      "category": "consonant",
+      "tone": "low-voiceless",
       "similarWords": ["kite"],
       "variants": [
         {
           "position": "middle",
           "romanization": "kh",
-          "word": "ฆระฆัง",
-          "wordTranslation": "bell",
-          "wordEmoji": "🔔",
-          "wordTransliteration": "kho ra khang"
+          "exampleWord": "ฆระฆัง",
+          "exampleWordExplanation": "bell",
+          "exampleWordEmoji": "🔔",
+          "exampleWordTransliteration": "kho ra khang"
         }
       ]
     },
     {
-      "order": 5,
+      "id": "ngo-ngu",
       "letter": "ง",
       "learningOrder": 5,
-      "type": "consonant",
-      "subType": "low-sonorant",
+      "category": "consonant",
+      "tone": "low-sonorant",
       "similarWords": ["sing"],
       "variants": [
         {
           "position": "anywhere",
           "romanization": "ng",
-          "word": "งงู",
-          "wordTranslation": "snake",
-          "wordEmoji": "🐍",
-          "wordTransliteration": "ngo ngu"
+          "exampleWord": "งงู",
+          "exampleWordExplanation": "snake",
+          "exampleWordEmoji": "🐍",
+          "exampleWordTransliteration": "ngo ngu"
         }
       ]
     },
     {
-      "order": 6,
+      "id": "jo-jan",
       "letter": "จ",
       "learningOrder": 19,
-      "type": "consonant",
-      "subType": "middle",
+      "category": "consonant",
+      "tone": "middle",
       "similarWords": ["jam"],
       "variants": [
         {
           "position": "middle",
           "romanization": "j",
-          "word": "จจาน",
-          "wordTranslation": "plate",
-          "wordEmoji": "🍽️",
-          "wordTransliteration": "jo jan"
+          "exampleWord": "จจาน",
+          "exampleWordExplanation": "plate",
+          "exampleWordEmoji": "🍽️",
+          "exampleWordTransliteration": "jo jan"
         }
       ]
     },
     {
-      "order": 7,
+      "id": "cho-ching",
       "letter": "ฉ",
       "learningOrder": 34,
-      "type": "consonant",
-      "subType": "high",
+      "category": "consonant",
+      "tone": "high",
       "similarWords": ["chop"],
       "variants": [
         {
           "position": "middle",
           "romanization": "ch",
-          "word": "ฉฉิ่ง",
-          "wordTranslation": "cymbals",
-          "wordEmoji": "🎶",
-          "wordTransliteration": "cho ching"
+          "exampleWord": "ฉฉิ่ง",
+          "exampleWordExplanation": "cymbals",
+          "exampleWordEmoji": "🎶",
+          "exampleWordTransliteration": "cho ching"
         }
       ]
     },
     {
-      "order": 8,
+      "id": "cho-chang",
       "letter": "ช",
       "learningOrder": 20,
-      "type": "consonant",
-      "subType": "low-voiceless",
+      "category": "consonant",
+      "tone": "low-voiceless",
       "similarWords": ["chop"],
       "variants": [
         {
           "position": "middle",
           "romanization": "ch",
-          "word": "ชช้าง",
-          "wordTranslation": "elephant",
-          "wordEmoji": "🐘",
-          "wordTransliteration": "cho chang"
+          "exampleWord": "ชช้าง",
+          "exampleWordExplanation": "elephant",
+          "exampleWordEmoji": "🐘",
+          "exampleWordTransliteration": "cho chang"
         }
       ]
     },
     {
-      "order": 9,
+      "id": "so-so",
       "letter": "ซ",
       "learningOrder": 23,
-      "type": "consonant",
-      "subType": "middle",
+      "category": "consonant",
+      "tone": "middle",
       "similarWords": ["sing"],
       "variants": [
         {
           "position": "middle",
           "romanization": "s",
-          "word": "ซโซ่",
-          "wordTranslation": "chain",
-          "wordEmoji": "⛓️",
-          "wordTransliteration": "so so"
+          "exampleWord": "ซโซ่",
+          "exampleWordExplanation": "chain",
+          "exampleWordEmoji": "⛓️",
+          "exampleWordTransliteration": "so so"
         }
       ]
     },
     {
-      "order": 10,
+      "id": "cho-choe",
       "letter": "ฌ",
       "learningOrder": 42,
-      "type": "consonant",
-      "subType": "low-voiceless",
+      "category": "consonant",
+      "tone": "low-voiceless",
       "similarWords": ["chop"],
       "variants": [
         {
           "position": "middle",
           "romanization": "ch",
-          "word": "ฌเฌอ",
-          "wordTranslation": "tree",
-          "wordEmoji": "🌳",
-          "wordTransliteration": "cho choe"
+          "exampleWord": "ฌเฌอ",
+          "exampleWordExplanation": "tree",
+          "exampleWordEmoji": "🌳",
+          "exampleWordTransliteration": "cho choe"
         }
       ]
     },
     {
-      "order": 11,
+      "id": "yo-ying",
       "letter": "ญ",
       "learningOrder": 30,
-      "type": "consonant",
-      "subType": "low-sonorant",
+      "category": "consonant",
+      "tone": "low-sonorant",
       "similarWords": ["yes"],
       "variants": [
         {
           "position": "middle",
           "romanization": "y",
-          "word": "ญหญิง",
-          "wordTranslation": "woman",
-          "wordEmoji": "👩🏼",
-          "wordTransliteration": "yo ying"
+          "exampleWord": "ญหญิง",
+          "exampleWordExplanation": "woman",
+          "exampleWordEmoji": "👩🏼",
+          "exampleWordTransliteration": "yo ying"
         }
       ]
     },
     {
-      "order": 12,
+      "id": "do-chada",
       "letter": "ฎ",
       "learningOrder": 36,
-      "type": "consonant",
-      "subType": "middle",
+      "category": "consonant",
+      "tone": "middle",
       "similarWords": ["dog"],
       "variants": [
         {
           "position": "middle",
           "romanization": "d",
-          "word": "ฎชฎา",
-          "wordTranslation": "headdress",
-          "wordEmoji": "👑",
-          "wordTransliteration": "do cha da"
+          "exampleWord": "ฎชฎา",
+          "exampleWordExplanation": "headdress",
+          "exampleWordEmoji": "👑",
+          "exampleWordTransliteration": "do cha da"
         }
       ]
     },
     {
-      "order": 13,
+      "id": "to-patak",
       "letter": "ฏ",
       "learningOrder": 37,
-      "type": "consonant",
-      "subType": "middle",
+      "category": "consonant",
+      "tone": "middle",
       "similarWords": ["toad"],
       "variants": [
         {
           "position": "anywhere",
           "romanization": "t",
-          "word": "ฏปฏัก",
-          "wordTranslation": "javelin",
-          "wordEmoji": "𐃆",
-          "wordTransliteration": "to pa tak"
+          "exampleWord": "ฏปฏัก",
+          "exampleWordExplanation": "javelin",
+          "exampleWordEmoji": "𐃆",
+          "exampleWordTransliteration": "to pa tak"
         }
       ]
     },
     {
-      "order": 14,
+      "id": "tho-than",
       "letter": "ฐ",
       "learningOrder": 32,
-      "type": "consonant",
-      "subType": "high",
+      "category": "consonant",
+      "tone": "high",
       "similarWords": ["thaw"],
       "variants": [
         {
           "position": "middle",
           "romanization": "th",
-          "word": "ฐฐาน",
-          "wordTranslation": "base",
-          "wordEmoji": "🏛️",
-          "wordTransliteration": "tho than"
+          "exampleWord": "ฐฐาน",
+          "exampleWordExplanation": "base",
+          "exampleWordEmoji": "🏛️",
+          "exampleWordTransliteration": "tho than"
         }
       ]
     },
     {
-      "order": 15,
+      "id": "tho-montho",
       "letter": "ฑ",
       "learningOrder": 39,
-      "type": "consonant",
-      "subType": "low-voiceless",
+      "category": "consonant",
+      "tone": "low-voiceless",
       "similarWords": ["thaw"],
       "variants": [
         {
           "position": "middle",
           "romanization": "t",
-          "word": "ฑมณโฑ",
-          "wordTranslation": "\"Montho\" (name of a mythical heroine)",
-          "wordEmoji": "👸",
-          "wordTransliteration": "tho mon tho"
+          "exampleWord": "ฑมณโฑ",
+          "exampleWordExplanation": "\"Montho\" (name of a mythical heroine)",
+          "exampleWordEmoji": "👸",
+          "exampleWordTransliteration": "tho mon tho"
         }
       ]
     },
     {
-      "order": 16,
+      "id": "tho-phuthao",
       "letter": "ฒ",
       "learningOrder": 38,
-      "type": "consonant",
-      "subType": "low-voiceless",
+      "category": "consonant",
+      "tone": "low-voiceless",
       "similarWords": ["thaw"],
       "variants": [
         {
           "position": "middle",
           "romanization": "th",
-          "word": "ฒผู้เฒ่า",
-          "wordTranslation": "elder",
-          "wordEmoji": "👴🏼",
-          "wordTransliteration": "tho phu thao"
+          "exampleWord": "ฒผู้เฒ่า",
+          "exampleWordExplanation": "elder",
+          "exampleWordEmoji": "👴🏼",
+          "exampleWordTransliteration": "tho phu thao"
         }
       ]
     },
     {
-      "order": 17,
+      "id": "no-nen",
       "letter": "ณ",
       "learningOrder": 27,
-      "type": "consonant",
-      "subType": "low-sonorant",
+      "category": "consonant",
+      "tone": "low-sonorant",
       "similarWords": ["no"],
       "variants": [
         {
           "position": "anywhere",
           "romanization": "n",
-          "word": "ณเณร",
-          "wordTranslation": "monk",
-          "wordEmoji": "👨🏼‍🦲",
-          "wordTransliteration": "no nen"
+          "exampleWord": "ณเณร",
+          "exampleWordExplanation": "monk",
+          "exampleWordEmoji": "👨🏼‍🦲",
+          "exampleWordTransliteration": "no nen"
         }
       ]
     },
     {
-      "order": 18,
+      "id": "doe-dek",
       "letter": "ด",
       "learningOrder": 11,
-      "type": "consonant",
-      "subType": "middle",
+      "category": "consonant",
+      "tone": "middle",
       "similarWords": ["dog"],
       "variants": [
         {
           "position": "middle",
           "romanization": "d",
-          "word": "ดเด็ก",
-          "wordTranslation": "child",
-          "wordEmoji": "👶🏼",
-          "wordTransliteration": "doe dek"
+          "exampleWord": "ดเด็ก",
+          "exampleWordExplanation": "child",
+          "exampleWordEmoji": "👶🏼",
+          "exampleWordTransliteration": "doe dek"
         }
       ]
     },
     {
-      "order": 19,
+      "id": "dtaua-dtao",
       "letter": "ต",
       "learningOrder": 13,
-      "type": "consonant",
-      "subType": "middle",
+      "category": "consonant",
+      "tone": "middle",
       "similarWords": ["toad"],
       "variants": [
         {
           "position": "anywhere",
           "romanization": "t",
-          "word": "ตเต่า",
-          "wordTranslation": "turtle",
-          "wordEmoji": "🐢",
-          "wordTransliteration": "dtaua dtao"
+          "exampleWord": "ตเต่า",
+          "exampleWordExplanation": "turtle",
+          "exampleWordEmoji": "🐢",
+          "exampleWordTransliteration": "dtaua dtao"
         }
       ]
     },
     {
-      "order": 20,
+      "id": "tho-thung",
       "letter": "ถ",
       "learningOrder": 24,
-      "type": "consonant",
-      "subType": "high",
+      "category": "consonant",
+      "tone": "high",
       "similarWords": ["thaw"],
       "variants": [
         {
           "position": "middle",
           "romanization": "th",
-          "word": "ถถุง",
-          "wordTranslation": "bag",
-          "wordEmoji": "👜",
-          "wordTransliteration": "tho thung"
+          "exampleWord": "ถถุง",
+          "exampleWordExplanation": "bag",
+          "exampleWordEmoji": "👜",
+          "exampleWordTransliteration": "tho thung"
         }
       ]
     },
     {
-      "order": 21,
+      "id": "tho-thahan",
       "letter": "ท",
       "learningOrder": 10,
-      "type": "consonant",
-      "subType": "low-voiceless",
+      "category": "consonant",
+      "tone": "low-voiceless",
       "similarWords": ["thaw"],
       "variants": [
         {
           "position": "middle",
           "romanization": "th",
-          "word": "ททหาร",
-          "wordTranslation": "soldier",
-          "wordEmoji": "👨🏼‍✈️",
-          "wordTransliteration": "tho thahan"
+          "exampleWord": "ททหาร",
+          "exampleWordExplanation": "soldier",
+          "exampleWordEmoji": "👨🏼‍✈️",
+          "exampleWordTransliteration": "tho thahan"
         }
       ]
     },
     {
-      "order": 22,
+      "id": "tho-thong",
       "letter": "ธ",
       "learningOrder": 25,
-      "type": "consonant",
-      "subType": "low-voiceless",
+      "category": "consonant",
+      "tone": "low-voiceless",
       "similarWords": ["thaw"],
       "variants": [
         {
           "position": "middle",
           "romanization": "th",
-          "word": "ธธง",
-          "wordTranslation": "flag",
-          "wordEmoji": "🚩",
-          "wordTransliteration": "tho thong"
+          "exampleWord": "ธธง",
+          "exampleWordExplanation": "flag",
+          "exampleWordEmoji": "🚩",
+          "exampleWordTransliteration": "tho thong"
         }
       ]
     },
     {
-      "order": 23,
+      "id": "no-nu",
       "learningOrder": 1,
       "letter": "น",
-      "type": "consonant",
-      "subType": "low-sonorant",
+      "category": "consonant",
+      "tone": "low-sonorant",
       "similarWords": ["no"],
       "variants": [
         {
           "position": "anywhere",
           "romanization": "n",
-          "word": "นหนู",
-          "wordTranslation": "mouse",
-          "wordEmoji": "🐭",
-          "wordTransliteration": "no nu"
+          "exampleWord": "นหนู",
+          "exampleWordExplanation": "mouse",
+          "exampleWordEmoji": "🐭",
+          "exampleWordTransliteration": "no nu"
         }
       ]
     },
     {
-      "order": 24,
+      "id": "bo-baimai",
       "letter": "บ",
       "learningOrder": 14,
-      "type": "consonant",
-      "subType": "middle",
+      "category": "consonant",
+      "tone": "middle",
       "similarWords": ["boat"],
       "variants": [
         {
           "position": "middle",
           "romanization": "b",
-          "word": "บใบไม้",
-          "wordTranslation": "leaf",
-          "wordEmoji": "🍃",
-          "wordTransliteration": "bo bai mai"
+          "exampleWord": "บใบไม้",
+          "exampleWordExplanation": "leaf",
+          "exampleWordEmoji": "🍃",
+          "exampleWordTransliteration": "bo bai mai"
         }
       ]
     },
     {
-      "order": 25,
+      "id": "bo-bplaa",
       "letter": "ป",
       "learningOrder": 15,
-      "type": "consonant",
-      "subType": "middle",
+      "category": "consonant",
+      "tone": "middle",
       "similarWords": ["paw"],
       "variants": [
         {
           "position": "anywhere",
           "romanization": "p",
-          "word": "ปปลา",
-          "wordTranslation": "fish",
-          "wordEmoji": "🐟",
-          "wordTransliteration": "bo bplaa"
+          "exampleWord": "ปปลา",
+          "exampleWordExplanation": "fish",
+          "exampleWordEmoji": "🐟",
+          "exampleWordTransliteration": "bo bplaa"
         }
       ]
     },
     {
-      "order": 26,
+      "id": "pho-phueng",
       "letter": "ผ",
       "learningOrder": 29,
-      "type": "consonant",
-      "subType": "high",
+      "category": "consonant",
+      "tone": "high",
       "similarWords": ["paw"],
       "variants": [
         {
           "position": "middle",
           "romanization": "ph",
-          "word": "ผผึ้ง",
-          "wordTranslation": "bee",
-          "wordEmoji": "🐝",
-          "wordTransliteration": "pho phueng"
+          "exampleWord": "ผผึ้ง",
+          "exampleWordExplanation": "bee",
+          "exampleWordEmoji": "🐝",
+          "exampleWordTransliteration": "pho phueng"
         }
       ]
     },
     {
-      "order": 27,
+      "id": "fo-fah",
       "letter": "ฝ",
       "learningOrder": 35,
-      "type": "consonant",
-      "subType": "high",
+      "category": "consonant",
+      "tone": "high",
       "similarWords": ["fan"],
       "variants": [
         {
           "position": "middle",
           "romanization": "f",
-          "word": "ฝฝา",
-          "wordTranslation": "lid",
-          "wordEmoji": "🍶",
-          "wordTransliteration": "fo fah"
+          "exampleWord": "ฝฝา",
+          "exampleWordExplanation": "lid",
+          "exampleWordEmoji": "🍶",
+          "exampleWordTransliteration": "fo fah"
         }
       ]
     },
     {
-      "order": 28,
+      "id": "pho-phan",
       "letter": "พ",
       "learningOrder": 18,
-      "type": "consonant",
-      "subType": "low-voiceless",
+      "category": "consonant",
+      "tone": "low-voiceless",
       "similarWords": ["paw"],
       "variants": [
         {
           "position": "middle",
           "romanization": "p",
-          "word": "พพาน",
-          "wordTranslation": "offering bowl",
-          "wordEmoji": "🍚",
-          "wordTransliteration": "pho phan"
+          "exampleWord": "พพาน",
+          "exampleWordExplanation": "offering bowl",
+          "exampleWordEmoji": "🍚",
+          "exampleWordTransliteration": "pho phan"
         }
       ]
     },
     {
-      "order": 29,
+      "id": "fo-fan",
       "letter": "ฟ",
       "learningOrder": 31,
-      "type": "consonant",
-      "subType": "low-voiceless",
+      "category": "consonant",
+      "tone": "low-voiceless",
       "similarWords": ["paw"],
       "variants": [
         {
           "position": "middle",
           "romanization": "f",
-          "word": "ฟฟัน",
-          "wordTranslation": "teeth",
-          "wordEmoji": "🦷",
-          "wordTransliteration": "fo fan"
+          "exampleWord": "ฟฟัน",
+          "exampleWordExplanation": "teeth",
+          "exampleWordEmoji": "🦷",
+          "exampleWordTransliteration": "fo fan"
         }
       ]
     },
     {
-      "order": 30,
+      "id": "pho-sam-phao",
       "letter": "ภ",
       "learningOrder": 26,
-      "type": "consonant",
-      "subType": "low-voiceless",
+      "category": "consonant",
+      "tone": "low-voiceless",
       "similarWords": ["paw"],
       "variants": [
         {
           "position": "middle",
           "romanization": "ph",
-          "word": "ภสำเภา",
-          "wordTranslation": "ship",
-          "wordEmoji": "🚢",
-          "wordTransliteration": "pho sam phao"
+          "exampleWord": "ภสำเภา",
+          "exampleWordExplanation": "ship",
+          "exampleWordEmoji": "🚢",
+          "exampleWordTransliteration": "pho sam phao"
         }
       ]
     },
     {
-      "order": 31,
+      "id": "mo-ma",
       "letter": "ม",
       "learningOrder": 6,
-      "type": "consonant",
-      "subType": "low-sonorant",
+      "category": "consonant",
+      "tone": "low-sonorant",
       "similarWords": ["mom"],
       "variants": [
         {
           "position": "anywhere",
           "romanization": "m",
-          "word": "มม้า",
-          "wordTranslation": "horse",
-          "wordEmoji": "🐴",
-          "wordTransliteration": "mo ma"
+          "exampleWord": "มม้า",
+          "exampleWordExplanation": "horse",
+          "exampleWordEmoji": "🐴",
+          "exampleWordTransliteration": "mo ma"
         }
       ]
     },
     {
-      "order": 32,
+      "id": "yo-yak",
       "letter": "ย",
       "learningOrder": 7,
-      "type": "consonant",
-      "subType": "low-sonorant",
+      "category": "consonant",
+      "tone": "low-sonorant",
       "similarWords": ["yawn"],
       "variants": [
         {
           "position": "anywhere",
           "romanization": "y",
-          "word": "ยยักษ์",
-          "wordTranslation": "giant",
-          "wordEmoji": "🧌",
-          "wordTransliteration": "yo yak"
+          "exampleWord": "ยยักษ์",
+          "exampleWordExplanation": "giant",
+          "exampleWordEmoji": "🧌",
+          "exampleWordTransliteration": "yo yak"
         }
       ]
     },
     {
-      "order": 33,
+      "id": "ro-rua",
       "letter": "ร",
       "learningOrder": 2,
-      "type": "consonant",
-      "subType": "low-sonorant",
+      "category": "consonant",
+      "tone": "low-sonorant",
       "similarWords": ["roar"],
       "variants": [
         {
           "position": "middle",
           "romanization": "r",
-          "word": "รเรือ",
-          "wordTranslation": "boat",
-          "wordEmoji": "🚤",
-          "wordTransliteration": "ro rua"
+          "exampleWord": "รเรือ",
+          "exampleWordExplanation": "boat",
+          "exampleWordEmoji": "🚤",
+          "exampleWordTransliteration": "ro rua"
         }
       ]
     },
     {
-      "order": 34,
+      "id": "lo-ling",
       "letter": "ล",
       "learningOrder": 8,
-      "type": "consonant",
-      "subType": "low-sonorant",
+      "category": "consonant",
+      "tone": "low-sonorant",
       "similarWords": ["low"],
       "variants": [
         {
           "position": "middle",
           "romanization": "l",
-          "word": "ลลิง",
-          "wordTranslation": "monkey",
-          "wordEmoji": "🐒",
-          "wordTransliteration": "lo ling"
+          "exampleWord": "ลลิง",
+          "exampleWordExplanation": "monkey",
+          "exampleWordEmoji": "🐒",
+          "exampleWordTransliteration": "lo ling"
         }
       ]
     },
     {
-      "order": 35,
+      "id": "wo-waen",
       "letter": "ว",
       "learningOrder": 9,
-      "type": "consonant",
-      "subType": "low-sonorant",
+      "category": "consonant",
+      "tone": "low-sonorant",
       "similarWords": ["wow"],
       "variants": [
         {
           "position": "middle",
           "romanization": "w",
-          "word": "วแหวน",
-          "wordTranslation": "ring",
-          "wordEmoji": "💍",
-          "wordTransliteration": "wo waen"
+          "exampleWord": "วแหวน",
+          "exampleWordExplanation": "ring",
+          "exampleWordEmoji": "💍",
+          "exampleWordTransliteration": "wo waen"
         }
       ]
     },
     {
-      "order": 36,
+      "id": "so-sala",
       "letter": "ศ",
       "learningOrder": 22,
-      "type": "consonant",
-      "subType": "high",
+      "category": "consonant",
+      "tone": "high",
       "similarWords": ["saw"],
       "variants": [
         {
           "position": "middle",
           "romanization": "s",
-          "word": "ศศาลา",
-          "wordTranslation": "pavilion",
-          "wordEmoji": "🏯",
-          "wordTransliteration": "so sala"
+          "exampleWord": "ศศาลา",
+          "exampleWordExplanation": "pavilion",
+          "exampleWordEmoji": "🏯",
+          "exampleWordTransliteration": "so sala"
         }
       ]
     },
     {
-      "order": 37,
+      "id": "so-ruhsi",
       "letter": "ษ",
       "learningOrder": 28,
-      "type": "consonant",
-      "subType": "high",
+      "category": "consonant",
+      "tone": "high",
       "similarWords": ["saw"],
       "variants": [
         {
           "position": "middle",
           "romanization": "s",
-          "word": "ษฤๅษี",
-          "wordTranslation": "hermit",
-          "wordEmoji": "🧙‍♂️",
-          "wordTransliteration": "so ruh si"
+          "exampleWord": "ษฤๅษี",
+          "exampleWordExplanation": "hermit",
+          "exampleWordEmoji": "🧙‍♂️",
+          "exampleWordTransliteration": "so ruh si"
         }
       ]
     },
     {
-      "order": 38,
+      "id": "so-sua",
       "letter": "ส",
       "learningOrder": 12,
-      "type": "consonant",
-      "subType": "high",
+      "category": "consonant",
+      "tone": "high",
       "similarWords": ["saw"],
       "variants": [
         {
           "position": "middle",
           "romanization": "s",
-          "word": "สเสือ",
-          "wordTranslation": "tiger",
-          "wordEmoji": "🐅",
-          "wordTransliteration": "so sua"
+          "exampleWord": "สเสือ",
+          "exampleWordExplanation": "tiger",
+          "exampleWordEmoji": "🐅",
+          "exampleWordTransliteration": "so sua"
         }
       ]
     },
     {
-      "order": 39,
+      "id": "ho-hip",
       "letter": "ห",
       "learningOrder": 17,
-      "type": "consonant",
-      "subType": "high",
+      "category": "consonant",
+      "tone": "high",
       "similarWords": ["how"],
       "variants": [
         {
           "position": "middle",
           "romanization": "h",
-          "word": "หหีบ",
-          "wordTranslation": "box",
-          "wordEmoji": "📦",
-          "wordTransliteration": "ho hip"
+          "exampleWord": "หหีบ",
+          "exampleWordExplanation": "box",
+          "exampleWordEmoji": "📦",
+          "exampleWordTransliteration": "ho hip"
         }
       ]
     },
     {
-      "order": 40,
+      "id": "lo-jula",
       "letter": "ฬ",
       "learningOrder": 40,
-      "type": "consonant",
-      "subType": "low-sonorant",
+      "category": "consonant",
+      "tone": "low-sonorant",
       "similarWords": ["low"],
       "variants": [
         {
           "position": "middle",
           "romanization": "l",
-          "word": "ฬจุฬา",
-          "wordTranslation": "kite",
-          "wordEmoji": "🪁",
-          "wordTransliteration": "lo jula"
+          "exampleWord": "ฬจุฬา",
+          "exampleWordExplanation": "kite",
+          "exampleWordEmoji": "🪁",
+          "exampleWordTransliteration": "lo jula"
         }
       ]
     },
     {
-      "order": 41,
+      "id": "o-ang",
       "letter": "อ",
       "learningOrder": 3,
-      "type": "consonant",
-      "subType": "middle",
+      "category": "consonant",
+      "tone": "middle",
       "similarWords": [],
       "variants": [
         {
           "position": "middle",
           "romanization": "-",
-          "word": "ออ่าง",
-          "wordTranslation": "basin",
-          "wordEmoji": "🛁",
-          "wordTransliteration": "o ang"
+          "exampleWord": "ออ่าง",
+          "exampleWordExplanation": "basin",
+          "exampleWordEmoji": "🛁",
+          "exampleWordTransliteration": "o ang"
         }
       ]
     },
     {
-      "order": 42,
+      "id": "ho-nokhuuk",
       "letter": "ฮ",
       "learningOrder": 33,
-      "type": "consonant",
-      "subType": "low-sonorant",
+      "category": "consonant",
+      "tone": "low-sonorant",
       "similarWords": ["how"],
       "variants": [
         {
           "position": "middle",
           "romanization": "h",
-          "word": "ฮนกฮูก",
-          "wordTranslation": "owl",
-          "wordEmoji": "🦉",
-          "wordTransliteration": "ho nok huuk"
+          "exampleWord": "ฮนกฮูก",
+          "exampleWordExplanation": "owl",
+          "exampleWordEmoji": "🦉",
+          "exampleWordTransliteration": "ho nok huuk"
         }
       ]
     }
