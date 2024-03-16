@@ -21,7 +21,8 @@ sea-orm = { version = "0.12.14", features = [
     "runtime-tokio-native-tls",
 ] }
 entity = { path = "entity" }
-migration = { path = "migration" } # Only use this if migrations are to be run on the end user's machine
+thaiscript-db-service = { path = "service" }
+tokio = { version = "1.36.0", features = ["full"] }
 
 [features]
 # This feature is used for production builds or when a dev server is not specified, DO NOT REMOVE!!
