@@ -2,3 +2,7 @@
 # will have compiled files and executables
 /target/
 
+db.sqlite
+
+# Keep the .env file public since it doesn't contain any sensitive information (only the database file path)
+# .env
