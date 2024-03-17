@@ -1,5 +1,5 @@
 import { Button, Stack, Text } from "@mantine/core";
-import { LetterVariant } from "./data/types";
+import { LetterVariant } from "./api/types";
 import { speak } from "./speech";
 
 interface LetterVariantCardProps extends LetterVariant {}
