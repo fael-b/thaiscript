@@ -106,13 +106,39 @@ impl MigrationTrait for Migration {
                     )
                     .to_owned(),
             )
-            .await
+            .await?;
+
+        // Create relevant indexes
+        manager
+            .create_index(
+                Index::create()
+                    .table(LetterVariant::Table)
+                    .name("idx_letter_variant_category")
+                    .col(LetterVariant::Category)
+                    .to_owned(),
+            )
+            .await?;
+
+        Ok(())
     }
 
     async fn down(&self, manager: &SchemaManager) -> Result<(), DbErr> {
+        // Drop relevant indexes
+        manager
+            .drop_index(
+                Index::drop()
+                    .table(LetterVariant::Table)
+                    .name("idx_letter_variant_category")
+                    .to_owned(),
+            )
+            .await?;
+
+        // Drop table afterwards
         manager
             .drop_table(Table::drop().table(LetterVariant::Table).to_owned())
-            .await
+            .await?;
+
+        Ok(())
     }
 }
 
