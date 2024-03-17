@@ -143,7 +143,7 @@ impl MigrationTrait for Migration {
 }
 
 #[derive(DeriveIden)]
-enum LetterVariant {
+pub enum LetterVariant {
     Table,
     Id,
     Letter,
