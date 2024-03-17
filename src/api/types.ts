@@ -20,10 +20,23 @@ export interface LetterVariantWithUnparsedSimilarWords extends Omit<LetterVarian
 export interface ReviewOutcome {
   id: number;
   letterVariantId: string;
-  reviewType: string;
+  reviewType: ReviewType;
   correct: boolean;
   msTimeTaken: number;
   date: string;
 }
 
 export interface SaveReviewOutcomeForm extends Omit<ReviewOutcome, "id" | "date"> {}
+
+export type ReviewType =
+  | "letter-to-romanization"
+  | "romanization-to-letter"
+  | "speech-to-letter"
+  | "letter-to-speech"
+  | "speech-to-word"
+  | "speech-to-emoji"
+  | "emoji-to-word"
+  | "word-to-emoji"
+  | "letter-to-drawing"
+  | "speech-to-drawing"
+  | "emoji-to-drawing";

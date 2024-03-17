@@ -27,7 +27,22 @@ impl MigrationTrait for Migration {
                     )
                     .col(
                         ColumnDef::new(ReviewOutcome::ReviewType)
-                            .string_len(24)
+                            .enumeration(
+                                Alias::new("review_type"),
+                                [
+                                    Alias::new("letter-to-romanization"),
+                                    Alias::new("romanization-to-letter"),
+                                    Alias::new("speech-to-letter"),
+                                    Alias::new("letter-to-speech"),
+                                    Alias::new("speech-to-word"),
+                                    Alias::new("speech-to-emoji"),
+                                    Alias::new("emoji-to-word"),
+                                    Alias::new("word-to-emoji"),
+                                    Alias::new("letter-to-drawing"),
+                                    Alias::new("speech-to-drawing"),
+                                    Alias::new("emoji-to-drawing"),
+                                ],
+                            )
                             .not_null(),
                     )
                     .col(ColumnDef::new(ReviewOutcome::Date).date_time().not_null())
