@@ -4,12 +4,7 @@ import { speak } from "./speech";
 
 interface LetterVariantCardProps extends LetterVariant {}
 
-export function LetterVariantCard({
-  letter,
-  // tone,
-  romanization,
-  exampleWord,
-}: LetterVariantCardProps) {
+export function LetterVariantCard({ letter, romanization, exampleWord }: LetterVariantCardProps) {
   return (
     <Button variant="light" radius="lg" title={letter} onClick={() => speak(exampleWord)} h={80} w={80}>
       <Stack

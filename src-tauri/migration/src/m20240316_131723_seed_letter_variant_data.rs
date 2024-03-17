@@ -25,7 +25,7 @@ impl MigrationTrait for Migration {
                     letter: Set(letter_info.letter.to_owned()),
                     learning_order: Set(letter_info.learning_order),
                     category: Set(letter_info.category.to_owned()),
-                    tone: Set(letter_info.tone.to_owned()),
+                    group: Set(letter_info.group.to_owned()),
                     position: Set(variant.position.to_owned()),
                     romanization: Set(variant.romanization.to_owned()),
                     example_word: Set(variant.example_word.to_owned()),
@@ -63,7 +63,7 @@ struct LetterInfoSeed {
     letter: String,
     learning_order: i32,
     category: String,
-    tone: String,
+    group: String,
     similar_words: Vec<String>,
     variants: Vec<LetterVariantSeed>,
 }

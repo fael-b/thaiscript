@@ -5,7 +5,7 @@
       "letter": "ข",
       "learningOrder": 21,
       "category": "consonant",
-      "tone": "high",
+      "group": "high",
       "similarWords": ["kite"],
       "variants": [
         {
@@ -23,7 +23,7 @@
       "letter": "ก",
       "learningOrder": 4,
       "category": "consonant",
-      "tone": "middle",
+      "group": "middle",
       "similarWords": ["go"],
       "variants": [
         {
@@ -41,7 +41,7 @@
       "letter": "ค",
       "learningOrder": 16,
       "category": "consonant",
-      "tone": "low-voiceless",
+      "group": "low-voiceless",
       "similarWords": ["kite"],
       "variants": [
         {
@@ -59,7 +59,7 @@
       "letter": "ฆ",
       "learningOrder": 41,
       "category": "consonant",
-      "tone": "low-voiceless",
+      "group": "low-voiceless",
       "similarWords": ["kite"],
       "variants": [
         {
@@ -77,7 +77,7 @@
       "letter": "ง",
       "learningOrder": 5,
       "category": "consonant",
-      "tone": "low-sonorant",
+      "group": "low-sonorant",
       "similarWords": ["sing"],
       "variants": [
         {
@@ -95,7 +95,7 @@
       "letter": "จ",
       "learningOrder": 19,
       "category": "consonant",
-      "tone": "middle",
+      "group": "middle",
       "similarWords": ["jam"],
       "variants": [
         {
@@ -113,7 +113,7 @@
       "letter": "ฉ",
       "learningOrder": 34,
       "category": "consonant",
-      "tone": "high",
+      "group": "high",
       "similarWords": ["chop"],
       "variants": [
         {
@@ -131,7 +131,7 @@
       "letter": "ช",
       "learningOrder": 20,
       "category": "consonant",
-      "tone": "low-voiceless",
+      "group": "low-voiceless",
       "similarWords": ["chop"],
       "variants": [
         {
@@ -149,7 +149,7 @@
       "letter": "ซ",
       "learningOrder": 23,
       "category": "consonant",
-      "tone": "middle",
+      "group": "middle",
       "similarWords": ["sing"],
       "variants": [
         {
@@ -167,7 +167,7 @@
       "letter": "ฌ",
       "learningOrder": 42,
       "category": "consonant",
-      "tone": "low-voiceless",
+      "group": "low-voiceless",
       "similarWords": ["chop"],
       "variants": [
         {
@@ -185,7 +185,7 @@
       "letter": "ญ",
       "learningOrder": 30,
       "category": "consonant",
-      "tone": "low-sonorant",
+      "group": "low-sonorant",
       "similarWords": ["yes"],
       "variants": [
         {
@@ -203,7 +203,7 @@
       "letter": "ฎ",
       "learningOrder": 36,
       "category": "consonant",
-      "tone": "middle",
+      "group": "middle",
       "similarWords": ["dog"],
       "variants": [
         {
@@ -221,7 +221,7 @@
       "letter": "ฏ",
       "learningOrder": 37,
       "category": "consonant",
-      "tone": "middle",
+      "group": "middle",
       "similarWords": ["toad"],
       "variants": [
         {
@@ -239,7 +239,7 @@
       "letter": "ฐ",
       "learningOrder": 32,
       "category": "consonant",
-      "tone": "high",
+      "group": "high",
       "similarWords": ["thaw"],
       "variants": [
         {
@@ -257,7 +257,7 @@
       "letter": "ฑ",
       "learningOrder": 39,
       "category": "consonant",
-      "tone": "low-voiceless",
+      "group": "low-voiceless",
       "similarWords": ["thaw"],
       "variants": [
         {
@@ -275,7 +275,7 @@
       "letter": "ฒ",
       "learningOrder": 38,
       "category": "consonant",
-      "tone": "low-voiceless",
+      "group": "low-voiceless",
       "similarWords": ["thaw"],
       "variants": [
         {
@@ -293,7 +293,7 @@
       "letter": "ณ",
       "learningOrder": 27,
       "category": "consonant",
-      "tone": "low-sonorant",
+      "group": "low-sonorant",
       "similarWords": ["no"],
       "variants": [
         {
@@ -311,7 +311,7 @@
       "letter": "ด",
       "learningOrder": 11,
       "category": "consonant",
-      "tone": "middle",
+      "group": "middle",
       "similarWords": ["dog"],
       "variants": [
         {
@@ -329,7 +329,7 @@
       "letter": "ต",
       "learningOrder": 13,
       "category": "consonant",
-      "tone": "middle",
+      "group": "middle",
       "similarWords": ["toad"],
       "variants": [
         {
@@ -347,7 +347,7 @@
       "letter": "ถ",
       "learningOrder": 24,
       "category": "consonant",
-      "tone": "high",
+      "group": "high",
       "similarWords": ["thaw"],
       "variants": [
         {
@@ -365,7 +365,7 @@
       "letter": "ท",
       "learningOrder": 10,
       "category": "consonant",
-      "tone": "low-voiceless",
+      "group": "low-voiceless",
       "similarWords": ["thaw"],
       "variants": [
         {
@@ -383,7 +383,7 @@
       "letter": "ธ",
       "learningOrder": 25,
       "category": "consonant",
-      "tone": "low-voiceless",
+      "group": "low-voiceless",
       "similarWords": ["thaw"],
       "variants": [
         {
@@ -401,7 +401,7 @@
       "learningOrder": 1,
       "letter": "น",
       "category": "consonant",
-      "tone": "low-sonorant",
+      "group": "low-sonorant",
       "similarWords": ["no"],
       "variants": [
         {
@@ -419,7 +419,7 @@
       "letter": "บ",
       "learningOrder": 14,
       "category": "consonant",
-      "tone": "middle",
+      "group": "middle",
       "similarWords": ["boat"],
       "variants": [
         {
@@ -437,7 +437,7 @@
       "letter": "ป",
       "learningOrder": 15,
       "category": "consonant",
-      "tone": "middle",
+      "group": "middle",
       "similarWords": ["paw"],
       "variants": [
         {
@@ -455,7 +455,7 @@
       "letter": "ผ",
       "learningOrder": 29,
       "category": "consonant",
-      "tone": "high",
+      "group": "high",
       "similarWords": ["paw"],
       "variants": [
         {
@@ -473,7 +473,7 @@
       "letter": "ฝ",
       "learningOrder": 35,
       "category": "consonant",
-      "tone": "high",
+      "group": "high",
       "similarWords": ["fan"],
       "variants": [
         {
@@ -491,7 +491,7 @@
       "letter": "พ",
       "learningOrder": 18,
       "category": "consonant",
-      "tone": "low-voiceless",
+      "group": "low-voiceless",
       "similarWords": ["paw"],
       "variants": [
         {
@@ -509,7 +509,7 @@
       "letter": "ฟ",
       "learningOrder": 31,
       "category": "consonant",
-      "tone": "low-voiceless",
+      "group": "low-voiceless",
       "similarWords": ["paw"],
       "variants": [
         {
@@ -527,7 +527,7 @@
       "letter": "ภ",
       "learningOrder": 26,
       "category": "consonant",
-      "tone": "low-voiceless",
+      "group": "low-voiceless",
       "similarWords": ["paw"],
       "variants": [
         {
@@ -545,7 +545,7 @@
       "letter": "ม",
       "learningOrder": 6,
       "category": "consonant",
-      "tone": "low-sonorant",
+      "group": "low-sonorant",
       "similarWords": ["mom"],
       "variants": [
         {
@@ -563,7 +563,7 @@
       "letter": "ย",
       "learningOrder": 7,
       "category": "consonant",
-      "tone": "low-sonorant",
+      "group": "low-sonorant",
       "similarWords": ["yawn"],
       "variants": [
         {
@@ -581,7 +581,7 @@
       "letter": "ร",
       "learningOrder": 2,
       "category": "consonant",
-      "tone": "low-sonorant",
+      "group": "low-sonorant",
       "similarWords": ["roar"],
       "variants": [
         {
@@ -599,7 +599,7 @@
       "letter": "ล",
       "learningOrder": 8,
       "category": "consonant",
-      "tone": "low-sonorant",
+      "group": "low-sonorant",
       "similarWords": ["low"],
       "variants": [
         {
@@ -617,7 +617,7 @@
       "letter": "ว",
       "learningOrder": 9,
       "category": "consonant",
-      "tone": "low-sonorant",
+      "group": "low-sonorant",
       "similarWords": ["wow"],
       "variants": [
         {
@@ -635,7 +635,7 @@
       "letter": "ศ",
       "learningOrder": 22,
       "category": "consonant",
-      "tone": "high",
+      "group": "high",
       "similarWords": ["saw"],
       "variants": [
         {
@@ -653,7 +653,7 @@
       "letter": "ษ",
       "learningOrder": 28,
       "category": "consonant",
-      "tone": "high",
+      "group": "high",
       "similarWords": ["saw"],
       "variants": [
         {
@@ -671,7 +671,7 @@
       "letter": "ส",
       "learningOrder": 12,
       "category": "consonant",
-      "tone": "high",
+      "group": "high",
       "similarWords": ["saw"],
       "variants": [
         {
@@ -689,7 +689,7 @@
       "letter": "ห",
       "learningOrder": 17,
       "category": "consonant",
-      "tone": "high",
+      "group": "high",
       "similarWords": ["how"],
       "variants": [
         {
@@ -707,7 +707,7 @@
       "letter": "ฬ",
       "learningOrder": 40,
       "category": "consonant",
-      "tone": "low-sonorant",
+      "group": "low-sonorant",
       "similarWords": ["low"],
       "variants": [
         {
@@ -725,7 +725,7 @@
       "letter": "อ",
       "learningOrder": 3,
       "category": "consonant",
-      "tone": "middle",
+      "group": "middle",
       "similarWords": [],
       "variants": [
         {
@@ -743,7 +743,7 @@
       "letter": "ฮ",
       "learningOrder": 33,
       "category": "consonant",
-      "tone": "low-sonorant",
+      "group": "low-sonorant",
       "similarWords": ["how"],
       "variants": [
         {

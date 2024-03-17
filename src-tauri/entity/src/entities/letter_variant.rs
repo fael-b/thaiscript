@@ -12,7 +12,7 @@ pub struct Model {
     pub letter: String,
     pub learning_order: i32,
     pub category: String,
-    pub tone: String,
+    pub group: String,
     pub position: String,
     pub romanization: String,
     pub example_word: String,

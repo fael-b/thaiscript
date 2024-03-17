@@ -42,9 +42,9 @@ impl MigrationTrait for Migration {
                             .not_null(),
                     )
                     .col(
-                        ColumnDef::new(LetterVariant::Tone)
+                        ColumnDef::new(LetterVariant::Group)
                             .enumeration(
-                                Alias::new("tone"),
+                                Alias::new("group"),
                                 [
                                     Alias::new("high"),
                                     Alias::new("middle"),
@@ -123,7 +123,7 @@ enum LetterVariant {
     Letter,
     LearningOrder,
     Category,
-    Tone,
+    Group,
     Position,
     Romanization,
     ExampleWord,
