@@ -27,6 +27,17 @@ async fn get_letter_variants(
         .map_err(|e| e.to_string())
 }
 
+#[tauri::command]
+async fn get_letter_variants_by_category(
+    category: String,
+    state: tauri::State<'_, AppState>,
+) -> Result<Vec<LetterVariant>, String> {
+    let db = state.db.clone();
+    Query::find_letter_variants_by_category(&db, category)
+        .await
+        .map_err(|e| e.to_string())
+}
+
 #[tokio::main]
 async fn main() {
     // Get the database directory
@@ -65,7 +76,11 @@ async fn main() {
             });
             Ok(())
         })
-        .invoke_handler(tauri::generate_handler![greet, get_letter_variants])
+        .invoke_handler(tauri::generate_handler![
+            greet,
+            get_letter_variants,
+            get_letter_variants_by_category
+        ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }

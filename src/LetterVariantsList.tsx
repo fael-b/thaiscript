@@ -1,6 +1,6 @@
 import { Group, Title, Stack } from "@mantine/core";
 import { useQuery } from "@tanstack/react-query";
-import { fetchLetterVariants } from "./api/queries";
+import { fetchLetterVariantsByCategory } from "./api/queries";
 import { LetterVariant } from "./api/types";
 import { useMemo } from "react";
 import { useAtom } from "jotai";
@@ -15,8 +15,8 @@ export function LetterVariantsList() {
     isLoading,
     error,
   } = useQuery({
-    queryKey: ["letterVariants"],
-    queryFn: fetchLetterVariants,
+    queryKey: ["letterVariants", currentCategory] as const,
+    queryFn: ({ queryKey }) => fetchLetterVariantsByCategory(queryKey[1]),
   });
 
   const letterVariantsByCategoryAndGroup = useMemo(() => {

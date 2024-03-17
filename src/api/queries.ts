@@ -21,3 +21,24 @@ export async function fetchLetterVariants() {
     return [];
   }
 }
+
+export async function fetchLetterVariantsByCategory(category: LetterVariant["category"]) {
+  try {
+    const response = await invoke("get_letter_variants_by_category", { category });
+    if (typeof response !== "object" || !Array.isArray(response)) {
+      console.error("Invalid response type:", typeof response, response);
+      throw new Error("Invalid response from backend");
+    }
+    const letterVariants: LetterVariant[] = response.map((letterVariant: LetterVariantWithUnparsedSimilarWords) => {
+      return {
+        ...letterVariant,
+        similarWords: JSON.parse(letterVariant.similarWords),
+      };
+    });
+
+    return letterVariants;
+  } catch (err) {
+    console.error(err);
+    return [];
+  }
+}

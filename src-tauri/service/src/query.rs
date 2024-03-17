@@ -16,4 +16,14 @@ impl Query {
     ) -> Result<Option<letter_variant::Model>, DbErr> {
         LetterVariant::find_by_id(id).one(db).await
     }
+
+    pub async fn find_letter_variants_by_category(
+        db: &DbConn,
+        category: String,
+    ) -> Result<Vec<letter_variant::Model>, DbErr> {
+        LetterVariant::find()
+            .filter(letter_variant::Column::Category.eq(category))
+            .all(db)
+            .await
+    }
 }
