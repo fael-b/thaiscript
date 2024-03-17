@@ -33,6 +33,7 @@ export function HomeView() {
               to: "thai-gold",
             }}
             size="md"
+            miw="50%"
             className={styles.review}
           >
             Review
