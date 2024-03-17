@@ -40,7 +40,7 @@ export function HomeView() {
       </AppShell.Main>
       <AppShell.Footer>
         <Group justify="center" style={{ height: "100%" }}>
-          <ActionIcon title="Logs" radius="xl" size="xl" variant="outline">
+          <ActionIcon title="Logs" radius="xl" size="xl" variant="outline" disabled>
             <LineChart />
           </ActionIcon>
           <Button
