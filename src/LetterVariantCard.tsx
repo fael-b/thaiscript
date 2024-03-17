@@ -24,6 +24,7 @@ export function LetterVariantCard({
           c="thai-purple"
           style={{
             fontSize: 38,
+            fontFamily: "Sarabun, sans-serif",
           }}
         >
           {letter}
