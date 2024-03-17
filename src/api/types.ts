@@ -16,3 +16,14 @@ export interface LetterVariant {
 export interface LetterVariantWithUnparsedSimilarWords extends Omit<LetterVariant, "similarWords"> {
   similarWords: string;
 }
+
+export interface ReviewOutcome {
+  id: number;
+  letterVariantId: string;
+  reviewType: string;
+  correct: boolean;
+  msTimeTaken: number;
+  date: string;
+}
+
+export interface SaveReviewOutcomeForm extends Omit<ReviewOutcome, "id" | "date"> {}

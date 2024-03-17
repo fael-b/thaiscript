@@ -11,7 +11,7 @@ pub struct Model {
     pub letter_variant_id: String,
     pub review_type: String,
     pub date: String,
-    pub outcome: String,
+    pub correct: bool,
     pub ms_time_taken: i32,
 }
 

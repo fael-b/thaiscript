@@ -1,4 +1,4 @@
-use ::entity::{letter_variant, letter_variant::Entity as LetterVariant};
+use ::entity::letter_variant::{self, Entity as LetterVariant};
 use sea_orm::*;
 
 pub struct Query;

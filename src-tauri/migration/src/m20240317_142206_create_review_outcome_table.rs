@@ -31,7 +31,7 @@ impl MigrationTrait for Migration {
                             .not_null(),
                     )
                     .col(ColumnDef::new(ReviewOutcome::Date).date_time().not_null())
-                    .col(ColumnDef::new(ReviewOutcome::Outcome).string().not_null())
+                    .col(ColumnDef::new(ReviewOutcome::Correct).boolean().not_null())
                     .col(
                         ColumnDef::new(ReviewOutcome::MsTimeTaken)
                             .integer()
@@ -77,6 +77,6 @@ enum ReviewOutcome {
     LetterVariantId,
     ReviewType,
     Date,
-    Outcome,
+    Correct,
     MsTimeTaken,
 }
