@@ -19,33 +19,27 @@ export function LetterVariantsList() {
     queryFn: ({ queryKey }) => fetchLetterVariantsByCategory(queryKey[1]),
   });
 
-  const letterVariantsByCategoryAndGroup = useMemo(() => {
-    const letterVariantsByCategoryAndGroupMap = new Map<LetterVariant["category"], Map<LetterVariant["group"], LetterVariant[]>>();
-    return (
-      letterVariants?.reduce((acc, letterVariant) => {
-        if (!acc.has(letterVariant.category)) {
-          acc.set(letterVariant.category, new Map());
-        }
-        let categoryMap = acc.get(letterVariant.category)!;
-        if (!categoryMap.has(letterVariant.group)) {
-          categoryMap.set(letterVariant.group, []);
-        }
-        categoryMap.get(letterVariant.group)!.push(letterVariant);
-        return acc;
-      }, letterVariantsByCategoryAndGroupMap) ?? letterVariantsByCategoryAndGroupMap
+  const letterVariantsByGroup = useMemo(() => {
+    const letterVariantsByGroupMap = new Map<LetterVariant["group"], LetterVariant[]>();
+    return Array.from(
+      (
+        letterVariants?.reduce((acc, letterVariant) => {
+          if (!acc.has(letterVariant.group)) {
+            acc.set(letterVariant.group, []);
+          }
+          acc.get(letterVariant.group)!.push(letterVariant);
+          return acc;
+        }, letterVariantsByGroupMap) ?? letterVariantsByGroupMap
+      )?.entries() ?? [],
     );
   }, [letterVariants]);
-
-  const currentCategoryLetterVariants = useMemo(() => {
-    return Array.from(letterVariantsByCategoryAndGroup.get(currentCategory)?.entries() ?? []);
-  }, [currentCategory, letterVariantsByCategoryAndGroup]);
 
   return (
     <Stack gap="xs" mt="xs">
       {isLoading && <div>Loading...</div>}
       {error && <div>Error: {error.message}</div>}
       <section key={currentCategory}>
-        {currentCategoryLetterVariants.map(([group, letterVariants]) => (
+        {letterVariantsByGroup.map(([group, letterVariants]) => (
           <div key={group}>
             <Title order={2} px="xs" mb="xs">
               {groupLabels[group]}
