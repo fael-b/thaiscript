@@ -6,6 +6,7 @@ mod commands;
 use commands::letter_variant::get_letter_variants_by_category;
 use commands::review::get_next_reviews;
 use commands::review_outcome::save_review_outcome;
+use commands::speech::speak;
 use sea_orm::DatabaseConnection;
 use std::fs;
 use tauri::Manager;
@@ -56,7 +57,8 @@ async fn main() {
         .invoke_handler(tauri::generate_handler![
             get_letter_variants_by_category,
             save_review_outcome,
-            get_next_reviews
+            get_next_reviews,
+            speak
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
