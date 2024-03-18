@@ -20,6 +20,7 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
+  "$schema": "https://json.schemastore.org/tsconfig",
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
