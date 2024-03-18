@@ -23,6 +23,9 @@ dependencies:
   '@tauri-apps/api':
     specifier: ^1.5.3
     version: 1.5.3
+  clsx:
+    specifier: ^2.1.0
+    version: 2.1.0
   jotai:
     specifier: ^2.7.1
     version: 2.7.1(@types/react@18.2.64)(react@18.2.0)

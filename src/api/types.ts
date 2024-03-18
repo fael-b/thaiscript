@@ -29,14 +29,25 @@ export interface ReviewOutcome {
 export interface SaveReviewOutcomeForm extends Omit<ReviewOutcome, "id" | "date"> {}
 
 export type ReviewType =
+  | "initial"
+  | "initial-emoji"
+  | "initial-transliteration"
+  | "initial-drawing"
   | "letter-to-romanization"
-  | "romanization-to-letter"
-  | "speech-to-letter"
   | "letter-to-speech"
-  | "speech-to-word"
-  | "speech-to-emoji"
-  | "emoji-to-word"
-  | "word-to-emoji"
   | "letter-to-drawing"
+  | "speech-to-letter"
+  | "speech-to-word"
+  | "speech-to-transliteration"
+  | "speech-to-emoji"
   | "speech-to-drawing"
-  | "emoji-to-drawing";
+  | "emoji-to-word"
+  | "emoji-to-drawing"
+  | "romanization-to-letter"
+  | "word-to-emoji";
+
+export interface Review {
+  type: ReviewType;
+  letterVariant: LetterVariant;
+  options: LetterVariant[];
+}

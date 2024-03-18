@@ -1,11 +1,12 @@
 import { ActionIcon, AppShell, Button, Center, Group, SegmentedControl } from "@mantine/core";
-import { LetterVariantsList } from "../LetterVariantsList";
+import { LetterVariantsList } from "./LetterVariantsList";
 import { LineChart, Play } from "lucide-react";
 import styles from "./HomeView.module.css";
-import { categoryLabels } from "../labels/letter-variant";
-import { LetterVariant } from "../api/types";
-import { currentCategoryAtom } from "../state/navigation";
+import { categoryLabels } from "../../labels/letter-variant";
+import { LetterVariant } from "../../api/types";
+import { currentCategoryAtom } from "../../state/navigation";
 import { useAtom } from "jotai";
+import { Link } from "react-router-dom";
 
 export function HomeView() {
   const [currentCategory, setCurrentCategory] = useAtom(currentCategoryAtom);
@@ -44,6 +45,8 @@ export function HomeView() {
             <LineChart />
           </ActionIcon>
           <Button
+            component={Link}
+            to="/review"
             leftSection={<Play />}
             title="Review letters"
             radius="xl"

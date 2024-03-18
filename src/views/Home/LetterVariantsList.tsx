@@ -1,12 +1,12 @@
 import { Group, Title, Stack } from "@mantine/core";
 import { useQuery } from "@tanstack/react-query";
-import { fetchLetterVariantsByCategory } from "./api/queries";
-import { LetterVariant } from "./api/types";
+import { fetchLetterVariantsByCategory } from "../../api/queries";
+import { LetterVariant } from "../../api/types";
 import { useMemo } from "react";
 import { useAtom } from "jotai";
 import { LetterVariantCard } from "./LetterVariantCard";
-import { currentCategoryAtom } from "./state/navigation";
-import { groupLabels } from "./labels/letter-variant";
+import { currentCategoryAtom } from "../../state/navigation";
+import { groupLabels } from "../../labels/letter-variant";
 
 export function LetterVariantsList() {
   const [currentCategory] = useAtom(currentCategoryAtom);
