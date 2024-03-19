@@ -30,8 +30,6 @@ export interface SaveReviewOutcomeForm extends Omit<ReviewOutcome, "id" | "date"
 
 export type ReviewType =
   | "initial"
-  | "initial-emoji"
-  | "initial-transliteration"
   | "initial-drawing"
   | "letter-to-romanization"
   | "letter-to-speech"

@@ -31,8 +31,6 @@ impl MigrationTrait for Migration {
                                 Alias::new("review_type"),
                                 [
                                     Alias::new("initial"),
-                                    Alias::new("initial-emoji"),
-                                    Alias::new("initial-transliteration"),
                                     Alias::new("initial-drawing"),
                                     Alias::new("letter-to-romanization"),
                                     Alias::new("letter-to-speech"),
