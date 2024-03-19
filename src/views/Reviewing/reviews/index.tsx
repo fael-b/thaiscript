@@ -18,9 +18,8 @@ export function ReviewSwitcher(args: ReviewComponentBaseProps) {
       ReviewComponent = LetterToRomanization;
       break;
     default:
-      ReviewComponent = <Text>Unimplemented review type: "{args.review.type}"</Text>;
+      return <Text>Unimplemented review type: "{args.review.type}"</Text>;
   }
 
-  // @ts-ignore
   return <ReviewComponent {...args} />;
 }
