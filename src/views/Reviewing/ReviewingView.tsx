@@ -8,7 +8,8 @@ import { useEffect, useState } from "react";
 import { Review } from "../../api/types";
 import { fetchNextReviews } from "../../api/queries";
 import { saveReviewOutcome } from "../../api/mutations";
-import { LetterToRomanization } from "./reviews/LetterToRomanization";
+// import { LetterToRomanization } from "./reviews/LetterToRomanization";
+import { ReviewSwitcher } from "./reviews";
 
 export function ReviewingView() {
   const [reviews, handlers] = useListState<Review>([]);
@@ -82,7 +83,7 @@ export function ReviewingView() {
             <SessionTimer />
           </Text>
         </Group>
-        {currentReview && currentReview.type === "letter-to-romanization" && <LetterToRomanization review={currentReview} onComplete={handleReviewOutcome} />}
+        {currentReview && <ReviewSwitcher review={currentReview} onComplete={handleReviewOutcome} />}
       </Stack>
     </main>
   );

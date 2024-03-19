@@ -20,7 +20,7 @@ pub async fn get_next_reviews(state: tauri::State<'_, AppState>) -> Result<Vec<R
         .iter()
         .take(5)
         .map(|letter_variant| {
-            let review_type = "letter-to-romanization";
+            let review_type = "initial";
             let options = get_random_distinct_options(letter_variants.clone(), letter_variant, 4);
 
             Review {

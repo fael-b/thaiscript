@@ -1,16 +1,11 @@
 import { useEffect, useState } from "react";
-import { Review } from "../../../api/types";
 import { speak } from "../../../speech";
 import { Stack, Text, Group, Chip } from "@mantine/core";
 import clsx from "clsx";
-import styles from "./LetterToRomanization.module.css";
+import styles from "./Review.module.css";
+import { ReviewComponentBaseProps } from ".";
 
-interface LetterToRomanizationProps {
-  review: Review;
-  onComplete: (correct: boolean) => void;
-}
-
-export function LetterToRomanization({ review, onComplete }: LetterToRomanizationProps) {
+export function LetterToRomanization({ review, onComplete }: ReviewComponentBaseProps) {
   const [selectedOptionsIds, setSelectedOptionsIds] = useState(new Set());
   const isCorrectOptionSelected = selectedOptionsIds.has(review?.letterVariant.id);
 
