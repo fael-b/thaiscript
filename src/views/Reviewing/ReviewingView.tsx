@@ -3,36 +3,60 @@ import { X } from "lucide-react";
 import { Link } from "react-router-dom";
 import styles from "./ReviewingView.module.css";
 import { SessionTimer } from "./SessionTimer";
-import { useListState } from "@mantine/hooks";
-import { useEffect, useState } from "react";
+import { useQueue } from "@mantine/hooks";
+import { useCallback, useEffect, useState } from "react";
 import { Review } from "../../api/types";
 import { fetchNextReviews } from "../../api/queries";
 import { saveReviewOutcome } from "../../api/mutations";
-// import { LetterToRomanization } from "./reviews/LetterToRomanization";
 import { ReviewSwitcher } from "./reviews";
 
 export function ReviewingView() {
-  const [reviews, handlers] = useListState<Review>([]);
+  const {
+    state: reviewsHead,
+    queue: reviewsQueue,
+    add,
+    update,
+  } = useQueue<Review>({
+    limit: 1,
+    initialValues: [],
+  });
+  const currentReview = reviewsHead[0];
   const [isFetchingReviews, setIsFetchingReviews] = useState(false);
   const [currentReviewStatus, setCurrentReviewStatus] = useState({
     startedAt: Date.now(),
   });
-  const currentReview = reviews[0];
+
+  function popQueue() {
+    update((values) => values.filter((_, i) => i !== 0));
+  }
 
   useEffect(() => {
-    if (reviews.length === 0 && !isFetchingReviews) {
+    if (!currentReview && !isFetchingReviews) {
       setIsFetchingReviews(true);
-      fetchNextReviews().then((reviews) => {
-        if (reviews.length !== 0) {
-          handlers.append(...reviews);
+      fetchNextReviews().then((newReviews) => {
+        if (newReviews.length !== 0) {
+          // This is a workaround for a rerendering issue I didn't have time to figure out
+          update((_values) => [...newReviews]);
         }
         setIsFetchingReviews(false);
       });
     }
-  }, [reviews]);
+  }, []);
 
-  async function handleReviewOutcome(correct: boolean) {
-    if (currentReview) {
+  const transitionToNextReview = useCallback(() => {
+    setTimeout(() => {
+      popQueue();
+      setCurrentReviewStatus({
+        startedAt: Date.now(),
+      });
+    }, 1800);
+  }, [currentReview]);
+
+  const handleReviewOutcome = useCallback(
+    async (correct: boolean) => {
+      if (!currentReview) {
+        return;
+      }
       let msTimeTaken = Date.now() - currentReviewStatus.startedAt;
       await saveReviewOutcome({
         correct,
@@ -40,30 +64,26 @@ export function ReviewingView() {
         letterVariantId: currentReview.letterVariant.id,
         reviewType: currentReview.type,
       });
-      if (correct) {
-        if (reviews.length === 1) {
-          setIsFetchingReviews(true);
-          console.log("Fetching next reviews");
-          fetchNextReviews().then((reviews) => {
-            if (reviews.length !== 0) {
-              handlers.append(...reviews);
-            }
-            setIsFetchingReviews(false);
-            setTimeout(() => {
-              handlers.shift();
-            }, 1800);
-          });
-        } else {
-          setTimeout(() => {
-            handlers.shift();
-          }, 1800);
-        }
+
+      if (!correct) {
+        setCurrentReviewStatus({
+          startedAt: Date.now(),
+        });
+        return;
       }
-      setCurrentReviewStatus({
-        startedAt: Date.now(),
-      });
-    }
-  }
+
+      if (reviewsQueue.length === 0) {
+        setIsFetchingReviews(true);
+        const newReviews = await fetchNextReviews();
+        if (newReviews.length !== 0) {
+          add(...newReviews);
+        }
+        setIsFetchingReviews(false);
+      }
+      transitionToNextReview();
+    },
+    [currentReview, currentReviewStatus],
+  );
 
   return (
     <main className={styles.main}>
