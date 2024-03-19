@@ -4,6 +4,11 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  sort-by@1.2.0:
+    hash: mhnmllrcoc2ij72gpoljeap2la
+    path: patches/sort-by@1.2.0.patch
+
 dependencies:
   '@mantine/core':
     specifier: ^7.6.2
@@ -58,7 +63,7 @@ dependencies:
     version: 6.22.3(react-dom@18.2.0)(react@18.2.0)
   sort-by:
     specifier: ^1.2.0
-    version: 1.2.0
+    version: 1.2.0(patch_hash=mhnmllrcoc2ij72gpoljeap2la)
 
 devDependencies:
   '@tauri-apps/cli':
@@ -1598,11 +1603,12 @@ packages:
     hasBin: true
     dev: true
 
-  /sort-by@1.2.0:
+  /sort-by@1.2.0(patch_hash=mhnmllrcoc2ij72gpoljeap2la):
     resolution: {integrity: sha512-aRyW65r3xMnf4nxJRluCg0H/woJpksU1dQxRtXYzau30sNBOmf5HACpDd9MZDhKh7ALQ5FgSOfMPwZEtUmMqcg==}
     dependencies:
       object-path: 0.6.0
     dev: false
+    patched: true
 
   /source-map-js@1.0.2:
     resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==}
