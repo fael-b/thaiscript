@@ -11,8 +11,7 @@ pub async fn get_next_reviews(state: tauri::State<'_, AppState>) -> Result<Vec<R
     let db = state.db.clone();
     let mut letter_variants = Query::find_all_letter_variants(&db)
         .await
-        .map_err(|e| e.to_string())
-        .unwrap();
+        .map_err(|e| e.to_string())?;
 
     letter_variants.seq_shuffle(&mut rand::thread_rng());
 
