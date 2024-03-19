@@ -1,6 +1,9 @@
 # ThaiScript 🇹🇭
 
-The best way to learn Thai script.
+The best way to learn [Thai script](https://en.wikipedia.org/wiki/Thai_script).
+
+Available for Windows, macOS, and Linux (Android and iOS versions when Tauri 2.0 is released).
+
 Powered by [TypeScript](https://www.typescriptlang.org/), [React](https://react.dev/), and [Tauri](https://tauri.app/).
 
 ## Getting Started
@@ -8,13 +11,14 @@ Powered by [TypeScript](https://www.typescriptlang.org/), [React](https://react.
 ### Prerequisites
 
 - [Node.js](https://nodejs.org/en/)
-- [npm](https://www.npmjs.com/) (included with Node.js) or [pnpm](https://pnpm.io/) (recommended)
+- [pnpm](https://pnpm.io/) (install it via `npm install -g pnpm`)
 - [Rust](https://www.rust-lang.org/) (install it via [rustup](https://rustup.rs/))
+- [Tauri Prerequisites](https://tauri.app/v1/guides/getting-started/prerequisites)
 - [git](https://git-scm.com/) (optional)
 
 ### Installation
 
-1. Clone the repository or download the source code. Skip this step if you downloaded the source code.
+1. Clone the repository or download the source code. Don't run this command if you choose to download the source code.
 
 ```sh
 git clone git@github.com:fael-b/thaiscript.git
@@ -24,20 +28,26 @@ git clone git@github.com:fael-b/thaiscript.git
 
 ```sh
 cd thaiscript
-npm install # or pnpm install
+pnpm install
 ```
 
 3. Run the app in development mode.
 
 ```sh
-npm run tauri dev # or pnpm tauri dev
+pnpm tauri dev
 ```
 
 4. If everything went well, you can build the app to install it durably on your system.
 
 ```sh
-npm run tauri build # or pnpm tauri build
+pnpm tauri build
 ```
+
+## Additional Compatibility Details
+
+- Recommended Node.js version: **18 or higher**.
+- Required Rust version: **1.76.0 or higher**.
+- Having the Thai language pack installed on your system is **recommended** for the best experience, but _not required_.
 
 ## Problems / Suggestions
 
