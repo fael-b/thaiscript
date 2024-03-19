@@ -1,5 +1,6 @@
 // Returns a TTS audio file from Google Translate
 // The return type is Blob in JavaScript, which corresponds to Vec<u8> in Rust
+// This is needed on the server side because of CORS restrictions
 #[tauri::command]
 pub async fn speak(text: String) -> Result<Vec<u8>, String> {
     let response = reqwest::get(format!("https://translate.google.com/translate_tts?ie=UTF-8&q={}&tl=th-TH&total=1&idx=0&textlen={}&client=tw-ob", text, text.len()))
