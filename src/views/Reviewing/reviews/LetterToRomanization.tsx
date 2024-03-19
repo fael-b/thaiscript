@@ -64,6 +64,7 @@ export function LetterToRomanization({ review, onComplete }: ReviewComponentBase
                 },
               }}
               size="xl"
+              h="100px"
               key={option.id}
             >
               {option.romanization}
