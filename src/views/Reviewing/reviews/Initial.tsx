@@ -38,30 +38,21 @@ export function Initial({ review, onComplete }: ReviewComponentBaseProps) {
           color="thai-gold"
           c="thai-purple"
           radius="lg"
+          classNames={{
+            root: styles.chip_root,
+            label: styles.chip_label,
+            input: styles.chip_input,
+            iconWrapper: styles.chip_iconwrapper,
+          }}
           styles={{
             root: {
               width: "100%",
-              // Disable text selection
-              userSelect: "none",
-              WebkitTouchCallout: "none",
-              WebkitUserSelect: "none",
             },
             label: {
-              width: "100%",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
               height: 256,
-            },
-            input: {
-              width: "100%",
-            },
-            iconWrapper: {
-              display: "none",
             },
           }}
           size="xl"
-          // h="200"
           key={option.id}
         >
           <Stack align="center" justify="center">

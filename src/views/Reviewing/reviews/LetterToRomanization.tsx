@@ -49,31 +49,21 @@ export function LetterToRomanization({ review, onComplete }: ReviewComponentBase
               c="thai-purple"
               radius="lg"
               className={clsx(isSelected && !isCorrect && styles.shaking)}
+              classNames={{
+                root: styles.chip_root,
+                label: styles.chip_label,
+                input: styles.chip_input,
+                iconWrapper: styles.chip_iconwrapper,
+              }}
               styles={{
                 root: {
                   width: "45%",
-                  // Disable text selection
-                  userSelect: "none",
-                  WebkitTouchCallout: "none",
-                  WebkitUserSelect: "none",
                 },
                 label: {
-                  width: "100%",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
                   height: 100,
                 },
-                input: {
-                  width: "100%",
-                },
-                iconWrapper: {
-                  display: "none",
-                },
               }}
-              // w="45%"
               size="xl"
-              h="100"
               key={option.id}
             >
               {option.romanization}
