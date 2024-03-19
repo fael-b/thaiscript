@@ -55,8 +55,12 @@ pub async fn get_next_reviews(state: tauri::State<'_, AppState>) -> Result<Vec<R
                     .filter(|review_outcome| review_outcome.review_type != "initial")
                     .collect::<Vec<&ReviewOutcome>>();
 
-                // If the user has reviewed less than 5 times, don't consider it as learned
-                if relevant_review_outcomes.len() > 5 {
+                // If the user has reviewed less than 3 times, don't consider it as learned
+                if relevant_review_outcomes.len() < 3 {
+                    // println!(
+                    //     "relevant_review_outcomes.len() < 3: {}",
+                    //     relevant_review_outcomes.len()
+                    // );
                     return false;
                 }
 
@@ -134,27 +138,6 @@ pub async fn get_next_reviews(state: tauri::State<'_, AppState>) -> Result<Vec<R
     random_reviews.insert(0, next_letter_variant_review);
 
     Ok(random_reviews)
-
-    // OLD
-    // every_letter_variant.seq_shuffle(&mut rand::thread_rng());
-
-    // let reviews = every_letter_variant
-    //     .iter()
-    //     .take(5)
-    //     .map(|letter_variant| {
-    //         let review_type = "initial";
-    //         let options =
-    //             get_random_distinct_options(every_letter_variant.clone(), letter_variant, 4);
-
-    //         Review {
-    //             review_type: review_type.to_string(),
-    //             letter_variant: letter_variant.clone(),
-    //             options,
-    //         }
-    //     })
-    //     .collect();
-
-    // Ok(reviews)
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
