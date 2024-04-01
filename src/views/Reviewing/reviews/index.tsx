@@ -21,5 +21,5 @@ export function ReviewSwitcher(args: ReviewComponentBaseProps) {
       return <Text>Unimplemented review type: "{args.review.type}"</Text>;
   }
 
-  return <ReviewComponent {...args} />;
+  return <ReviewComponent key={args.review.letterVariant.id} {...args} />;
 }
