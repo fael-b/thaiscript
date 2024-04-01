@@ -113,7 +113,21 @@ pub async fn get_next_reviews(state: tauri::State<'_, AppState>) -> Result<Vec<R
     }
 
     // Get next letter variant to learn
-    let next_letter_variant_index = learning_letter_variants.len() + 1;
+    // Determining the index can be complex since the learning order can change between versions of the app
+    let mut learning_letter_orders = learning_letter_variants
+        .iter()
+        .map(|(letter_variant, _review_outcomes)| letter_variant.learning_order as usize)
+        .collect::<Vec<usize>>();
+    learning_letter_orders.sort();
+    let mut next_letter_variant_index: usize = 0;
+    for learning_order in learning_letter_orders.into_iter() {
+        if learning_order == next_letter_variant_index + 1 {
+            next_letter_variant_index += 1;
+        } else {
+            break;
+        }
+    }
+
     let next_letter_variant = every_letter_variant[next_letter_variant_index].clone();
     let next_letter_variant_review = Review {
         review_type: "initial".to_owned(),
