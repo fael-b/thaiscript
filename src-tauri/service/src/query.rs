@@ -34,16 +34,53 @@ impl Query {
     pub async fn find_currently_learning_letter_variants(
         db: &DbConn,
     ) -> Result<Vec<(letter_variant::Model, Vec<review_outcome::Model>)>, DbErr> {
-        LetterVariant::find()
-            .find_with_related(ReviewOutcome)
+        // let testing = LetterVariant::find()
+        //     // .order_by(letter_variant::Column::Id, Order::Desc)
+        //     .find_also_related(ReviewOutcome)
+        //     .order_by(review_outcome::Column::Id, Order::Desc)
+        //     .build(DbBackend::Sqlite)
+        //     .to_string();
+
+        // println!("test: {:?}", testing);
+
+        let pairs: Vec<(letter_variant::Model, review_outcome::Model)> = LetterVariant::find()
+            .find_also_related(ReviewOutcome)
+            .order_by_desc(review_outcome::Column::Id)
             .all(db)
             .await
             .map(|letter_variants| {
                 letter_variants
                     .into_iter()
-                    .filter(|(_letter_variant, review_outcomes)| review_outcomes.len() > 0)
+                    .filter(|(_letter_variant, review_outcome)| review_outcome.is_some())
+                    .map(|(letter_variant, review_outcome)| {
+                        (letter_variant, review_outcome.unwrap())
+                    })
                     .collect()
-            })
+            })?;
+
+        let pairings_map: std::collections::HashMap<
+            letter_variant::Model,
+            Vec<review_outcome::Model>,
+        > = pairs.into_iter().fold(
+            std::collections::HashMap::new(),
+            |mut acc, (letter_variant, review_outcome)| {
+                let review_outcomes = acc.entry(letter_variant).or_insert_with(Vec::new);
+                if review_outcomes.len() < 50 {
+                    review_outcomes.push(review_outcome);
+                }
+                acc
+            },
+        );
+
+        let mut sorted_pairs: Vec<(letter_variant::Model, Vec<review_outcome::Model>)> =
+            pairings_map.into_iter().collect();
+        sorted_pairs.sort_by(|(_, a), (_, b)| {
+            let a = a.first().unwrap();
+            let b = b.first().unwrap();
+            b.id.cmp(&a.id)
+        });
+
+        Ok(sorted_pairs)
     }
 
     pub async fn find_latest_review_outcome(

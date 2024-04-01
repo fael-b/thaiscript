@@ -1,6 +1,7 @@
 use crate::AppState;
 use entity::letter_variant::Model as LetterVariant;
 use entity::review_outcome::Model as ReviewOutcome;
+use rand::Rng;
 use rip_shuffle::RipShuffleSequential;
 use serde::{Deserialize, Serialize};
 use std::collections::HashSet;
@@ -19,12 +20,12 @@ pub async fn get_next_reviews(state: tauri::State<'_, AppState>) -> Result<Vec<R
         Query::find_latest_review_outcome(&db)
     );
     let every_letter_variant = every_letter_variant.map_err(|e| e.to_string())?;
-    let mut learning_letter_variants = learning_letter_variants.map_err(|e| e.to_string())?;
+    let learning_letter_variants = learning_letter_variants.map_err(|e| e.to_string())?;
     let latest_review_outcome = latest_review_outcome.map_err(|e| e.to_string())?;
 
     // println!(
-    //     "learning_letter_variants len: {}",
-    //     learning_letter_variants.len()
+    //     "first learning_letter_variant: {:?}",
+    //     learning_letter_variants.first().clone()
     // );
 
     if learning_letter_variants.len() == 0 {
@@ -82,24 +83,25 @@ pub async fn get_next_reviews(state: tauri::State<'_, AppState>) -> Result<Vec<R
             });
 
     // Shuffle the learning letter variants
-    learning_letter_variants.seq_shuffle(&mut rand::thread_rng());
+    // learning_letter_variants.seq_shuffle(&mut rand::thread_rng());
 
     if !has_reached_threshold {
-        let mut reviews: Vec<Review> = learning_letter_variants
-            .iter()
-            .take(5)
-            .map(|(letter_variant, _review_outcomes)| {
-                let review_type = "letter-to-romanization"; // TODO: Randomize review type
-                let options =
-                    get_random_distinct_options(every_letter_variant.clone(), letter_variant, 4);
+        let mut reviews = get_weighted_reviews(learning_letter_variants, every_letter_variant, 5);
+        // let mut reviews: Vec<Review> = learning_letter_variants
+        //     .iter()
+        //     .take(5)
+        //     .map(|(letter_variant, _review_outcomes)| {
+        //         let review_type = "letter-to-romanization"; // TODO: Randomize review type
+        //         let options =
+        //             get_random_distinct_options(every_letter_variant.clone(), letter_variant, 4);
 
-                Review {
-                    review_type: review_type.to_string(),
-                    letter_variant: letter_variant.clone(),
-                    options,
-                }
-            })
-            .collect();
+        //         Review {
+        //             review_type: review_type.to_string(),
+        //             letter_variant: letter_variant.clone(),
+        //             options,
+        //         }
+        //     })
+        //     .collect();
 
         // Shuffle the reviews
         reviews.seq_shuffle(&mut rand::thread_rng());
@@ -120,20 +122,22 @@ pub async fn get_next_reviews(state: tauri::State<'_, AppState>) -> Result<Vec<R
     };
 
     // Get 4 random letter variants to review
-    let mut random_reviews: Vec<Review> = learning_letter_variants
-        .iter()
-        .take(4)
-        .map(|(letter_variant, _review_outcomes)| {
-            let options =
-                get_random_distinct_options(every_letter_variant.clone(), letter_variant, 4);
+    let mut random_reviews =
+        get_weighted_reviews(learning_letter_variants, every_letter_variant, 4);
+    // let mut random_reviews: Vec<Review> = learning_letter_variants
+    //     .iter()
+    //     .take(4)
+    //     .map(|(letter_variant, _review_outcomes)| {
+    //         let options =
+    //             get_random_distinct_options(every_letter_variant.clone(), letter_variant, 4);
 
-            Review {
-                review_type: "letter-to-romanization".to_owned(),
-                letter_variant: letter_variant.clone(),
-                options,
-            }
-        })
-        .collect();
+    //         Review {
+    //             review_type: "letter-to-romanization".to_owned(),
+    //             letter_variant: letter_variant.clone(),
+    //             options,
+    //         }
+    //     })
+    //     .collect();
 
     random_reviews.insert(0, next_letter_variant_review);
 
@@ -179,6 +183,93 @@ fn get_random_distinct_options(
     options.seq_shuffle(&mut rand::thread_rng());
 
     options
+}
+
+fn get_weighted_reviews(
+    mut letter_variants: Vec<(LetterVariant, Vec<ReviewOutcome>)>,
+    every_letter_variant: Vec<LetterVariant>,
+    count: usize,
+) -> Vec<Review> {
+    let mut reviews = Vec::with_capacity(count);
+
+    // Letter variants are weighted based on:
+    // 1. The learning percentage of the letter variant (lower percentage = higher weight)
+    // 2. The last time the letter variant was reviewed (older = higher weight)
+    // 3. The number of times the letter variant has been reviewed (less = higher weight)
+
+    // (the letter_variants are already sorted by the time of last review (newest first))
+
+    let max_review_count = letter_variants
+        .iter()
+        .map(|(_, review_outcomes)| review_outcomes.len())
+        .max()
+        .unwrap();
+
+    letter_variants.sort_by(
+        |(_letter_variant_a, review_outcomes_a), (_letter_variant_b, review_outcomes_b)| {
+            let learning_percentage_a = review_outcomes_a
+                .iter()
+                .filter(|review_outcome| review_outcome.review_type != "initial")
+                .filter(|review_outcome| review_outcome.correct)
+                .count() as f32
+                / review_outcomes_a.len() as f32;
+
+            let learning_percentage_b = review_outcomes_b
+                .iter()
+                .filter(|review_outcome| review_outcome.review_type != "initial")
+                .filter(|review_outcome| review_outcome.correct)
+                .count() as f32
+                / review_outcomes_b.len() as f32;
+
+            let review_count_a = review_outcomes_a.len();
+            let normalized_review_count_a = review_count_a as f32 / max_review_count as f32;
+            let review_count_b = review_outcomes_b.len();
+            let normalized_review_count_b = review_count_b as f32 / max_review_count as f32;
+
+            // Weights are averaged to get a single f32 value
+            let weight_a = (learning_percentage_a + normalized_review_count_a) / 2.5;
+            let weight_b = (learning_percentage_b + normalized_review_count_b + 0.5) / 2.5;
+
+            weight_a.partial_cmp(&weight_b).unwrap()
+        },
+    );
+
+    let random_chance = 0.5;
+    for (letter_variant, _review_outcomes) in letter_variants.iter() {
+        // Randomly choose whether to include the letter variant
+        let letter_chance: f32 = rand::thread_rng().gen_range(0.0..1.0);
+        if letter_chance > random_chance {
+            continue;
+        }
+
+        let review_type = "letter-to-romanization"; // TODO: Randomize review type
+        let options = get_random_distinct_options(every_letter_variant.clone(), &letter_variant, 4);
+
+        reviews.push(Review {
+            review_type: review_type.to_string(),
+            letter_variant: letter_variant.clone(),
+            options,
+        });
+    }
+
+    if reviews.len() < count {
+        let filtered_letter_variants = letter_variants
+            .into_iter()
+            .filter(|(letter_variant, _)| {
+                reviews
+                    .iter()
+                    .all(|review| review.letter_variant.id != letter_variant.id)
+            })
+            .collect();
+        let mut remaining_reviews = get_weighted_reviews(
+            filtered_letter_variants,
+            every_letter_variant,
+            count - reviews.len(),
+        );
+        reviews.append(&mut remaining_reviews);
+    }
+
+    reviews
 }
 
 fn move_first_review_if_same_as_latest_review(
