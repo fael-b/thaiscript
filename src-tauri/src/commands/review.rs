@@ -7,7 +7,7 @@ use std::collections::HashSet;
 use thaiscript_db_service::Query;
 use tokio::join;
 
-const LEARNED_PERCENTAGE_THRESHOLD: f32 = 0.8;
+const LEARNED_PERCENTAGE_THRESHOLD: f32 = 0.6;
 
 #[tauri::command]
 pub async fn get_next_reviews(state: tauri::State<'_, AppState>) -> Result<Vec<Review>, String> {
