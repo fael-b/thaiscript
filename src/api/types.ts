@@ -34,6 +34,8 @@ export type ReviewType =
   | "letter-to-romanization"
   | "letter-to-speech"
   | "letter-to-drawing"
+  | "letter-to-word"
+  | "letter-to-transliteration"
   | "speech-to-letter"
   | "speech-to-word"
   | "speech-to-transliteration"

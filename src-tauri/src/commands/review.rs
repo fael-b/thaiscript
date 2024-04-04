@@ -256,7 +256,7 @@ fn get_weighted_reviews(
             continue;
         }
 
-        let review_type = "letter-to-romanization"; // TODO: Randomize review type
+        let review_type = get_random_review_type();
         let options = get_random_distinct_options(every_letter_variant.clone(), &letter_variant, 4);
 
         reviews.push(Review {
@@ -298,4 +298,25 @@ fn move_first_review_if_same_as_latest_review(
             }
         }
     }
+}
+
+fn get_random_review_type() -> String {
+    let review_types = vec![
+        "letter-to-romanization",
+        // "letter-to-speech",
+        // "letter-to-drawing",
+        "letter-to-word",
+        "letter-to-transliteration",
+        // "speech-to-letter",
+        // "speech-to-word",
+        // "speech-to-transliteration",
+        // "speech-to-emoji",
+        // "speech-to-drawing",
+        // "emoji-to-word",
+        // "emoji-to-drawing",
+        // "romanization-to-letter",
+        // "word-to-emoji",
+    ];
+    let random_index = rand::thread_rng().gen_range(0..review_types.len());
+    review_types[random_index].to_string()
 }

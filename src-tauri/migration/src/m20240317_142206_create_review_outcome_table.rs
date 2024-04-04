@@ -33,6 +33,8 @@ impl MigrationTrait for Migration {
                                     Alias::new("initial"),
                                     Alias::new("initial-drawing"),
                                     Alias::new("letter-to-romanization"),
+                                    Alias::new("letter-to-word"),
+                                    Alias::new("letter-to-transliteration"),
                                     Alias::new("letter-to-speech"),
                                     Alias::new("letter-to-drawing"),
                                     Alias::new("speech-to-letter"),
