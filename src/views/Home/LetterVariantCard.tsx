@@ -27,7 +27,6 @@ export function LetterVariantCard({ letter, romanization, exampleWord }: LetterV
           c="thai-purple"
           style={{
             fontSize: 38,
-            fontFamily: "Sarabun, sans-serif",
           }}
         >
           {letter}

@@ -36,7 +36,7 @@ export function ReviewingView() {
       fetchNextReviews().then((newReviews) => {
         if (newReviews.length !== 0) {
           // This is a workaround for a rerendering issue I didn't have time to figure out
-          update((_values) => [...newReviews]);
+          update((values) => [...values, ...newReviews]);
         }
         setIsFetchingReviews(false);
       });
@@ -89,7 +89,7 @@ export function ReviewingView() {
     <main className={styles.main}>
       <Stack gap="xl" justify="center" align="center">
         <Group justify="space-between" p="xs" w="100%">
-          <ActionIcon color="thai-red" variant="subtle" radius="lg" component={Link} to="/" size="xl">
+          <ActionIcon color="thai-red" variant="subtle" radius="lg" component={Link} to="/" size="xl" onClick={() => update((_current) => [])}>
             <X />
           </ActionIcon>
           <Text

@@ -248,7 +248,7 @@ fn get_weighted_reviews(
         },
     );
 
-    let random_chance = 0.5;
+    let random_chance = 0.65;
     for (letter_variant, _review_outcomes) in letter_variants.iter() {
         // Randomly choose whether to include the letter variant
         let letter_chance: f32 = rand::thread_rng().gen_range(0.0..1.0);
