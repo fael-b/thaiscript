@@ -72,7 +72,7 @@ export function LetterToTransliteration({ review, onComplete }: ReviewComponentB
               {isSelected && (
                 <>
                   <br />
-                  {option.exampleWord.split(" ")[0]}
+                  {option.exampleWord}
                 </>
               )}
             </Chip>

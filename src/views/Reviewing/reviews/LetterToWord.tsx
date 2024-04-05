@@ -67,7 +67,7 @@ export function LetterToWord({ review, onComplete }: ReviewComponentBaseProps) {
               h="100px"
               key={`${review.letterVariant.id}-${option.id}`}
             >
-              {option.exampleWordEmoji} {option.exampleWordExplanation}
+              {option.exampleWordEmoji} {option.exampleWordExplanation.split(" ")[0]}
             </Chip>
           );
         })}
